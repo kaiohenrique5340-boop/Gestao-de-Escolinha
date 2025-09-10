@@ -183,3 +183,17 @@ main .apresentacao2 article h3{
 main .apresentacao2 article p{
     color: rgb(255, 255, 255);
 }
+
+footer div{
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 120px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
