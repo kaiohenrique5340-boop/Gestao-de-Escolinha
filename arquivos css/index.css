@@ -103,16 +103,7 @@ main section .botoes{
     gap: 30px;
 }
 
-main section .botoes .bnt1{
-    background-color: red;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 10px 20px 10px 20px;
-
-}
-
-main section .botoes .bnt2{
+main section .botoes .bnt {
     background-color: black;
     color: white;
     text-decoration: none;

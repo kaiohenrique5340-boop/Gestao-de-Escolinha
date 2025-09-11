@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body{
+    background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+    
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -41,10 +46,7 @@ header a p {
 
 /* inicio do form */
 
-body{
-    background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
-    
-}
+
 
 
 form{
