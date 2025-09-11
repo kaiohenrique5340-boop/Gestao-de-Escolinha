@@ -138,11 +138,19 @@ main .apresentacao2 {
 }
 
 main .apresentacao2 h2 {
-display: flex;
-justify-content: center;
-padding: 30px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-color: white;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    align-items: center;
+    gap: 20px;
+}
+
+main .apresentacao2 h2 i{
+    color: red;
+    font-size: 40px;
 }
 
 main .apresentacao2 div {
@@ -182,6 +190,8 @@ main .apresentacao2 article h3{
 
 main .apresentacao2 article p{
     color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 footer div{
