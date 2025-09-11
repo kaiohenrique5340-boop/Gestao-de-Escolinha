@@ -14,9 +14,9 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(10, 10, 10);
-  padding: 35px 30px;
+  padding: 25px 30px;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   list-style-type: none;
   z-index: 1000;
@@ -57,40 +57,13 @@ form{
 .tela-login{
   background-color:rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
-  padding: 80px;
+  padding: 50px;
   border-radius: 17px;
   color: white;
   width: 450px;
-}
-
-input{
-  padding: 5px;
-  width: 100%;
-  height: 40px;
-  border:none;
-  outline: none;
-  font-size: 15px;
-  border-radius: 5;
-}
-
-button{
-  background-color: dodgerblue;
-  border:none;
-  padding: 15px;
-  width: 200px;
-  border-radius: 10px;
-  color: white;
-  font-size: 15px;
-  margin-top: 30px;
-}
-
-button:hover{
-  background-color: white;
-  color: black;
-  transition: 0.5s;
 }
 
 h1{
@@ -100,10 +73,39 @@ h1{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+input{
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  border:none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+button{
+  background-color: dodgerblue;
+  border:none;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+button:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+
+
 .register{
   text-decoration: none;
   color: rgb(227, 240, 229);
-  font-size: 17px;
+  font-size: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

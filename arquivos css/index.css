@@ -10,9 +10,9 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(10, 10, 10);
-  padding: 35px 30px;
+  padding: 25px 30px;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   list-style-type: none;
   z-index: 1000;
@@ -48,7 +48,7 @@ header a p {
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -71,7 +71,7 @@ main .apresentacao {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 480px;
     width: 100%;
     display: flex;
     text-align: center;
@@ -84,7 +84,7 @@ main .apresentacao {
 }
 
 main section h1{
-    font-size: 80px;
+    font-size: 50px;
     color: white;
 }
 
@@ -95,29 +95,28 @@ main section h1 strong{
 main section p {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 main section .botoes{
-    display: flex;
-    gap: 30px;
+    margin-top: 20px;
 }
 
-main section .botoes .bnt {
+main section .botoes {
     background-color: black;
-    color: white;
-    text-decoration: none;
     border-radius: 10px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px;
     border: 1px, solid, red;
 }
 
-main section .botoes .bnt1:hover{
-    transform: scale(1.1);
-    transition: 1s;
+main section .botoes a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
 }
 
-main section .botoes .bnt2:hover{
+
+main section .botoes:hover{
     transform: scale(1.1);
     transition: 1s;
 }
@@ -131,17 +130,17 @@ main .apresentacao2 {
 main .apresentacao2 h2 {
     display: flex;
     justify-content: center;
-    height: 100px;
-    padding: 0px;
+    height: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    font-size: 15px;
 }
 
 main .apresentacao2 h2 i{
     color: red;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 main .apresentacao2 div {
@@ -151,8 +150,8 @@ main .apresentacao2 div {
 
 main .apresentacao2 article{
     background-color: black;
-    width: 350px;
-    height: 420px;
+    width: 230px;
+    height: 270px;
     text-align: center;
     color: white;
     border-radius: 20px;
@@ -169,19 +168,19 @@ main .apresentacao2 article:hover{
 }
 
 main .apresentacao2 article i{
-    font-size: 60px;
+    font-size: 30px;
     color: red;
 }
 
 main .apresentacao2 article h3{
-    font-size: 30px;
+    font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px;
 }
 
 main .apresentacao2 article p{
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 15px;
     margin-top: 20px;
 }
 
@@ -190,11 +189,11 @@ footer div{
     color: white;
     width: 100%;
     text-align: center;
-    height: 120px;
+    height: 50px;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
