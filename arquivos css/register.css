@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(10, 10, 10);
+  padding: 35px 30px;
+  color: white;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style-type: none;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+header a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+header a i {
+    color: red;
+    margin: 0 20px 0 0;
+}
+
+header a p {
+    color: red;
+}
