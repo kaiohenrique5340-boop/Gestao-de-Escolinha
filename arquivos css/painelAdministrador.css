@@ -17,12 +17,13 @@ body {
 /* Estilos do Cabeçalho */
 .header {
     grid-area: header;
-    background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+    background-color: rgb(10, 10, 10);
     color: #fff;
     display: flex;
     align-items: center;
     padding: 0 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 200%;
 }
 
 .logo-container {
@@ -42,10 +43,26 @@ body {
     font-weight: bold;
 }
 
+#logo {
+    color: red;
+    
+}
+
+header div p {
+    color: red;
+}
+
+.logo-container {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
 /* Estilos da Barra Lateral (Menu) */
 .sidebar {
     grid-area: sidebar;
-    background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+    background-color: rgb(10, 10, 10);
     color: #fff;
     padding: 20px;
 }
@@ -91,3 +108,5 @@ body {
         padding: 10px;
     }
 }
+
+
