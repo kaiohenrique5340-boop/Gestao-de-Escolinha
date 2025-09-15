@@ -11,7 +11,7 @@
 <body>
         <!-- cabecalho-->
     <header>
-        <a href="index.html">
+        <a href="index.php">
             <i class="bi bi-trophy"></i> Living <p>Figth</p>
         </a>
         
@@ -22,14 +22,14 @@
     <main>
         <form action="#" method="post">
             <div class="tela-login">
-                    <h1>Login</h1> <br>
+                    <h1>LOGIN</h1> <br>
                 <input type="text" name="nome" id="nome" placeholder="Nome" required> 
                 <br><br>
                 <input type="password" name="senha" id="senha" placeholder="Senha" required> 
                 <br><br>
                 <button>Enviar</button> 
                 <br><br>
-                    <a href="register.html" class="register">Não possui login? <span>Crie sua conta</span></a>
+                    <a href="register.php" class="register">Não possui login? <span>Crie sua conta</span></a>
             </div>
             
         </form>

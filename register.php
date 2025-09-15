@@ -9,18 +9,26 @@
     <title>Formulário de Inscrição</title>
 </head>
 <body>
-         <!-- cabecalho-->
-    <header>
-            <a href="index.html">
-                <i class="bi bi-trophy"></i> Living <p>Figth</p>
-            </a>
-    </header>
-        <!--fim do header-->
-
     <main>
 
+    <div class="logo">
+       <a href="index.php">
+            <i class="bi bi-trophy"></i> Living <p>Figth</p>
+        </a>
+    </div>
 
-
+    <form action="#" method="post">
+          <div class="tela-register">
+                  <h1>ESCRIÇÃO</h1> <br>
+              <input type="text" name="nome" id="nome" placeholder="Nome" required> 
+               <br><br>
+              <input type="password" name="senha" id="senha" placeholder="Senha" required> 
+              <br><br>
+              <button>Enviar</button> 
+              <br><br>
+                  <a href="login.php" class="register">Já possui login? <span>Crie sua conta</span></a>
+          </div>
+   </form>
 
     </main>
 
