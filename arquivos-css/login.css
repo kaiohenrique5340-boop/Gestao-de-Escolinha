@@ -116,9 +116,20 @@ button:hover{
   transition: 0.5s;
   list-style-type: none;
   text-decoration: none;
-
 }
 
+.reset_senha{
+text-decoration: none;
+color: white;
+font-size: 15px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.reset_senha:hover{
+color: dodgerblue;
+  transition: 0.5s;
+  list-style-type: none;
+  text-decoration: none;
+}
 
 
