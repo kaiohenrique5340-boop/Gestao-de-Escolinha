@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="../public/css/register.css">
     <title>Formulário com Validação</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
 <h2>Formulário de Cadastro</h2>
 
 <!-- Início do formulário -->
-<form id="formulario" action="register.php" method="post" onsubmit="return validarFormulario()">
+<form id="formulario" action="" method="post" onsubmit="return validarFormulario()">
     
     <!-- Campo de Nome -->
     <label for="nome">Nome:</label><br>
@@ -29,7 +29,7 @@
     <input type="date" id="data-nascimento" name="data-nascimento" required>
     <br><br>
 
-     <!-- Campo de Cpf -->
+    <!-- Campo de Cpf -->
     <label for="cpf">CPF:</label><br>
     <input type="number" id="cpf" name="cpf" required>
     <br><br>
@@ -54,7 +54,7 @@
     <input type="password" id="confirmar_senha" name="confirmar_senha" required oninput="mostrarSenha()">
     <br>
 			<!-- Campo para mensagem de confirmação das senhas -->
-    			<div id="mensagem_senha"></div>
+    <div id="mensagem_senha"></div>
     <br>
     <!-- Campo de CEP -->
     <label for="cep">CEP:</label><br>
