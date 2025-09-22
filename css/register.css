@@ -50,6 +50,13 @@ input[type="date"] {
     border-radius: 5px;
     margin-bottom: 20px;
 }
+    .bnt{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
 
 /* Estilo para os botões */
 button {
@@ -60,8 +67,9 @@ button {
     border-radius: 10px;
     color: white;
     font-size: 15px;
-    margin-top: 20px;
+
     cursor: pointer; /* Adiciona o cursor de clique */
+
 }
 
 button:hover {
@@ -78,4 +86,28 @@ button:hover {
     margin-top: -15px; /* Ajusta o espaçamento */
     margin-bottom: 10px;
     font-size: 14px;
+}
+
+.link-login{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+form .login{
+  text-decoration: none;
+  color: rgb(227, 240, 229);
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+}
+
+
+.login:hover{
+
+  color: dodgerblue;
+  transition: 0.5s;
+  list-style-type: none;
+  text-decoration: none;
 }
