@@ -130,7 +130,7 @@ main .apresentacao2 {
 main .apresentacao2 h2 {
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     align-items: center;
@@ -150,7 +150,7 @@ main .apresentacao2 div {
 
 main .apresentacao2 article{
     background-color: black;
-    width: 230px;
+    width: 200px;
     height: 270px;
     text-align: center;
     color: white;
