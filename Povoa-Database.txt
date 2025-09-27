@@ -1,0 +1,51 @@
+-- seleciona o banco de dados 
+USE living_figth;
+
+-- insere 15 usuarios aluno
+INSERT INTO Usuario (email_user, password_user, creation_date_user, status_user, tipo_user) VALUES
+('joao.silva@email.com', 'senha123', '2025-08-10', 1, 'aluno'),
+('maria.santos@email.com', 'senha123', '2025-08-11', 1, 'aluno'),
+('pedro.almeida@email.com', 'senha123', '2025-08-12', 1, 'aluno'),
+('ana.oliveira@email.com', 'senha123', '2025-08-13', 1, 'aluno'),
+('lucas.costa@email.com', 'senha123', '2025-08-14', 1, 'aluno'),
+('carla.pereira@email.com', 'senha123', '2025-08-15', 1, 'aluno'),
+('fernando.rodrigues@email.com', 'senha123', '2025-08-16', 0, 'aluno'), -- Exemplo de usuário inativo
+('beatriz.gomes@email.com', 'senha123', '2025-08-17', 1, 'aluno'),
+('rafael.martins@email.com', 'senha123', '2025-08-18', 1, 'aluno'),
+('juliana.fernandes@email.com', 'senha123', '2025-08-19', 1, 'aluno'),
+('marcos.souza@email.com', 'senha123', '2025-08-20', 1, 'aluno'),
+('leticia.lima@email.com', 'senha123', '2025-08-21', 1, 'aluno'),
+('gustavo.carvalho@email.com', 'senha123', '2025-08-22', 1, 'aluno'),
+('sofia.ribeiro@email.com', 'senha123', '2025-08-23', 1, 'aluno'),
+('bruno.araujo@email.com', 'senha123', '2025-08-24', 1, 'aluno');
+
+-- insere 3 usuarios instrutor
+INSERT INTO Usuario (email_user, password_user, creation_date_user, status_user, tipo_user) VALUES
+('mestre.carlos@email.com', 'senhaforte99', '2025-01-05', 1, 'instrutor'),
+('instrutora.helena@email.com', 'senhaforte99', '2025-02-15', 1, 'instrutor'),
+('sensei.ricardo@email.com', 'senhaforte99', '2025-03-20', 1, 'instrutor');
+
+
+-- povoando a tabela de aluno com os usuarios criado
+INSERT INTO Aluno (id_user, name_aluno, date_aluno) VALUES
+(1, 'João da Silva', '2005-04-12'),
+(2, 'Maria dos Santos', '2004-11-20'),
+(3, 'Pedro Almeida', '2006-01-30'),
+(4, 'Ana Oliveira', '2005-07-22'),
+(5, 'Lucas Costa', '2003-09-05'),
+(6, 'Carla Pereira', '2004-03-18'),
+(7, 'Fernando Rodrigues', '2006-05-14'),
+(8, 'Beatriz Gomes', '2005-02-28'),
+(9, 'Rafael Martins', '2004-08-01'),
+(10, 'Juliana Fernandes', '2003-12-10'),
+(11, 'Marcos Souza', '2005-10-03'),
+(12, 'Leticia Lima', '2006-06-09'),
+(13, 'Gustavo Carvalho', '2004-01-25'),
+(14, 'Sofia Ribeiro', '2005-08-19'),
+(15, 'Bruno Araujo', '2003-04-07');
+
+-- povoando a tabela de aluno com os instrutor criado
+INSERT INTO Instructor (id_user, name_instructor, tel_instructor) VALUES
+(16, 'Carlos Farias', '(21) 98877-6655'),
+(17, 'Helena Medeiros', '(21) 99988-7766'),
+(18, 'Ricardo Borges', '(21) 97766-5544');
