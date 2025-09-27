@@ -143,3 +143,9 @@ form .login{
   list-style-type: none;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    form {
+        width: 450px;
+    }
+}

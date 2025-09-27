@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+    
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(10, 10, 10);
+  padding: 25px 30px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style-type: none;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+header a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+header a i {
+    color: red;
+    margin: 0 20px 0 0;
+}
+
+header a p {
+    color: red;
+}
+
+
+/* fim do style do header */
+
+
+/* inicio do form */
+
+
+form{
+    text-align: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    border-radius: 17px;
+    color: white;
+    width: 450px;
+ 
+}
+
