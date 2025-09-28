@@ -1,10 +1,10 @@
 <?php
 
-$nome = $_POST["nome"];
-$telefone = $_POST["telefone"];
-$email = $_POST["email"];
-$senha = $_POST["senha"];
-$confirmarSenha = $_POST["confirmar_senha"];
+$nome = trim($_POST["nome"]);
+$telefone = trim($_POST["telefone"]);
+$email = trim($_POST["email"]);
+$senha = trim($_POST["senha"]);
+$confirmarSenha = trim($_POST["confirmar_senha"]);
 
 //garante que nao tenha campo nulo
 if(empty($nome) || empty($cpf) || empty($email) || empty($telefone) || empty($senha) || empty($confirmarSenha)) {
@@ -25,10 +25,6 @@ if(!verificaCelular($telefone)) {
 }
 if($senha !== $confirmarSenha) {
     echo "As senhas não coincidem.";
-    exit;
-}
-if($email !== $confirmarEmail) {
-    echo "Os emails não coincidem.";
     exit;
 }
 
