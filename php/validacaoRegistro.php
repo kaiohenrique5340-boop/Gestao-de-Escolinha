@@ -4,6 +4,7 @@ $nome = trim($_POST["nome"]);
 $telefone = trim($_POST["telefone"]);
 $email = trim($_POST["email"]);
 $senha = trim($_POST["senha"]);
+$senha_criptografada = password_hash($senha, PASSWORD_DEFAULT); //criptografa a senha para incluir no banco de dados
 $confirmarSenha = trim($_POST["confirmar_senha"]);
 
 //garante que nao tenha campo nulo
