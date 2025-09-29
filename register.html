@@ -66,37 +66,37 @@
     
     <!-- Campo de CEP -->
     <label for="cep">CEP:</label>
-    <input type="text" id="cep" name="cep" required>
+    <input type="text" id="cep" name="cep" required autocomplete="none">
     <br>
 
     <!-- Campo de Endereço -->
     <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" name="endereco" required>
+    <input type="text" id="endereco" name="endereco" required autocomplete="none">
     <br>
 
     <!-- Campo de Endereço -->
     <label for="numero">Número:</label>
-    <input type="text" id="numero" name="numero" required>
+    <input type="text" id="numero" name="numero" required autocomplete="none">
     <br>
 
     <!-- Campo de Complemento -->
     <label for="complemento">Complemento:</label>
-    <input type="text" id="compemento" name="complemento" >
+    <input type="text" id="compemento" name="complemento" autocomplete="none">
     <br>
 
     <!-- Campo de Bairro -->
     <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro"  required>
+    <input type="text" id="bairro" name="bairro"  required autocomplete="none">
     <br>
 
     <!-- Campo de Cidade -->
     <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade" name="cidade" required>
+    <input type="text" id="cidade" name="cidade" required autocomplete="none">
     <br>
 
     <!-- Campo de Estado -->
     <label for="estado">Estado:</label>
-    <input type="text" id="estado" name="estado" required>
+    <input type="text" id="estado" name="estado" required autocomplete="none">
     <br>
 
 
@@ -105,7 +105,7 @@
       <button type="submit">Cadastrar</button>
 
       <!-- Botão para Limpar o formulário -->
-      <button type="reset" id="linpar">Limpar</button>
+      <button type="reset" id="limpar">Limpar</button>
     </div>
 
     <div class="link-login">
@@ -129,6 +129,7 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
+    <script src="public/js/jq-viacep-3.7.1.min.js"></script>
     <script src="public/js/register.js"></script>
 </body>
 </html>
