@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/register.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"></head>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Formulário de Cadastro</title>
 </head>
 <body>
@@ -20,19 +19,21 @@
     <!--fim do header-->
 
 <!-- Início do formulário  ( aguardando a validação em js vt)--> 
-<form id="formulario" action="/php/validacaoRegistro.php" method="POST">
+<form id="form" action="#" method="POST">
 
     <h2>FORMULÁRIO DE CADASTRO</h2>
     
     <!-- Campo de Nome -->
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome"  required>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-    <label for="genero">Genero:</label>
-    <input type="radio" name="sexo" value="masculino">Masculino<br><!--nome agrupa os botoes do "Radio" e o "Value" deifine oque sera enviado no form-->
-    <input type="radio" name="sexo" value="feminino">Feminino<br>
-    <input type="radio" name="sexo" value="nao informado">Prefiro não dizer<br><br>
-    
+ 
+      <legend>Gênero:</legend>
+      <input type="radio" name="sexo" value="masculino"> Masculino</label>
+      <input type="radio" name="sexo" value="feminino"> Feminino</label>
+      <input type="radio" name="sexo" value="nao informado"> Prefiro não dizer</label>
+
+      <br>
+      <br>
 
     <!-- Campo Data de Nascimento -->
     <label for="data-nascimento">Data de Nascimento:</label>
@@ -41,7 +42,8 @@
 
      <!-- Campo de Cpf -->
     <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" required>
+    <input type="text" id="cpf" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required placeholder="000.000.000-00">
+
     <br>
 
     <!-- Campo de E-mail -->
@@ -51,7 +53,7 @@
 
     <!-- Campo Telefone contato -->
     <label for="telefone">Telefone:</label>
-    <input type="number" id="telefone" name="telefone" required>
+    <input type="tel" id="telefone" name="telefone" required>
     <br>
 
     <!-- Campo de Senha -->
@@ -60,44 +62,44 @@
     <br>
 
     <!-- Campo de Confirmar Senha -->
-    <label for="confirmar_senha">Confirmar Senha:</label>
-    <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+    <label for="confirmarsenha">Confirmar Senha:</label>
+    <input type="password" id="confirmarsenha" name="confirmarsenha" required>
     <br>
     
 
     <!-- Campo de CEP -->
     <label for="cep">CEP:</label>
-    <input type="text" id="cep" name="cep" required autocomplete="none">
+    <input type="text" id="cep" name="cep" required autocomplete="off">
     <br>
 
     <!-- Campo de Endereço -->
     <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" name="endereco" required autocomplete="none">
+    <input type="text" id="endereco" name="endereco" required autocomplete="off">
     <br>
 
     <!-- Campo de Endereço -->
     <label for="numero">Número:</label>
-    <input type="text" id="numero" name="numero" required autocomplete="none">
+    <input type="text" id="numero" name="numero" required autocomplete="off">
     <br>
 
     <!-- Campo de Complemento -->
     <label for="complemento">Complemento:</label>
-    <input type="text" id="compemento" name="complemento" autocomplete="none">
+    <input type="text" id="complemento" name="complemento" autocomplete="off">
     <br>
 
     <!-- Campo de Bairro -->
     <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro"  required autocomplete="none">
+    <input type="text" id="bairro" name="bairro"  required autocomplete="off">
     <br>
 
     <!-- Campo de Cidade -->
     <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade" name="cidade" required autocomplete="none">
+    <input type="text" id="cidade" name="cidade" required autocomplete="off">
     <br>
 
     <!-- Campo de Estado -->
     <label for="estado">Estado:</label>
-    <input type="text" id="estado" name="estado" required autocomplete="none">
+    <input type="text" id="estado" name="estado" required autocomplete="off">
     <br>
 
 
