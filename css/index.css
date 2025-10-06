@@ -72,7 +72,7 @@ main .apresentacao {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 100vh;
     width: 100%;
     display: flex;
     text-align: center;
@@ -124,11 +124,14 @@ main section .botoes:hover{
 
 main .apresentacao2 {
     background-color: rgb(10, 10, 10);    
-    height: 110vh;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-auto-columns: row;
+    place-items: center;
+
 }
 
- main .apresentacao2 h2 {
+ main h2 {
     display: flex;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -142,7 +145,7 @@ main .apresentacao2 {
     padding: 32px;
 }
 
- main .apresentacao2 h2 i{
+ main h2 i{
     color: red;
     font-size: 20px;
 }
@@ -164,6 +167,11 @@ main .apresentacao2 article{
     border: 2px solid red;
     
     
+}
+
+main .apresentacao2 article .cards{
+    width: 100%;
+    justify-content: center;
 }
 
 main .apresentacao2 article:hover{
@@ -201,13 +209,17 @@ footer div{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (min-width: 1400px) {
+/*responcividade para notbook*/
+
+@media (max-width: 1400px) {
     main .apresentacao{
-        height: 630px;
+        height: 470px;
     }
 }
 
-@media (max-width: 768px) {
+/*responcividade para mobile*/
+
+@media (max-width: 750px) {
 
     header{
         display: block;
@@ -231,7 +243,7 @@ footer div{
         
     }
     main .apresentacao{
-        height: 732px;
+        height: 74vh;
         display: flex;
     }
 
@@ -253,12 +265,13 @@ footer div{
         justify-content: center;
     }
 
-    main .apresentacao2 div {
-        display: block
+    main .apresentacao2 .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-columns: row;
+        place-items: center;
+
     }
     
-
-
 }
-
 

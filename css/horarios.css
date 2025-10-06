@@ -8,6 +8,7 @@ body{
     background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
     background-repeat: no-repeat;
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
     
 }
@@ -63,5 +64,9 @@ form{
     color: white;
     width: 450px;
  
+}
+
+form h2{
+    color: red;
 }
 

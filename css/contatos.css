@@ -64,4 +64,28 @@ form{
     width: 450px;
  
 }
+form h1{
+    margin-bottom: 20px;
+}
+
+form li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+form a{
+    text-decoration: none;
+    color: white;
+}
+
+form a:hover{
+    text-decoration: none;
+    color: red;
+    transition: 0.5s;
+}
+
+form a i{
+    color: red;
+    padding: 5px;
+}
 
