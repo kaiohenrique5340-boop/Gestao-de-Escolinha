@@ -117,7 +117,3 @@ const cpfInput = document.getElementById("cpf");
 });
 
 //final da validação da data de nascimento
-
-//
-
-   
