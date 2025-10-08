@@ -13,8 +13,6 @@
    // fim do Viacep
 
 
-
-
    //validação cpf
 const cpfInput = document.getElementById("cpf");
     const mensagem = document.getElementById("mensagem");
@@ -34,10 +32,10 @@ const cpfInput = document.getElementById("cpf");
       if (valor.length === 14) {
         if (validarCPF(valor)) {
           mensagem.style.color = "green";
-          mensagem.textContent = "✅ CPF válido!";
+          mensagem.textContent = "CPF válido!";
         } else {
           mensagem.style.color = "red";
-          mensagem.textContent = "❌ CPF inválido!";
+          mensagem.textContent = "CPF inválido!";
         }
       } else {
         mensagem.textContent = "";
@@ -70,14 +68,56 @@ const cpfInput = document.getElementById("cpf");
     }
 
     // Impede o envio se CPF for inválido
-    document.getElementById("form-cpf").addEventListener("submit", function(e) {
+    document.getElementById("form").addEventListener("submit", function(e) {
       if (!validarCPF(cpfInput.value)) {
         e.preventDefault();
         alert("CPF inválido! Corrija antes de enviar.");
       }
     });
+
     // fim da validação do campo cpf
 
-    
+
+    //inicio da validação data de nascimento 
+
+  document.addEventListener("DOMContentLoaded", function() {
+  const inputData = document.getElementById("dataNascimento");
+  const msgErro = document.getElementById("msgErro");
+
+  inputData.addEventListener("input", function() {
+    const valor = this.value;
+    const dataNasc = new Date(valor);
+    const hoje = new Date();
+    const minAno = hoje.getFullYear() - 120; // Limite de 120 anos
+
+    // Data inválida
+    if (!valor || isNaN(dataNasc.getTime())) {
+      msgErro.textContent = "Preencha uma data válida.";
+      msgErro.style.color = "red";
+      return;
+    }
+
+    // Data no futuro
+    if (dataNasc > hoje) {
+      msgErro.textContent = "A data não pode ser no futuro.";
+      msgErro.style.color = "red";
+      return;
+    }
+
+    // Data muito antiga
+    if (dataNasc.getFullYear() < minAno) {
+      msgErro.textContent = "A data é muito antiga. Verifique o ano.";
+      msgErro.style.color = "red";
+      return;
+    }
+
+    // Tudo certo
+    msgErro.textContent = "";
+  });
+});
+
+//final da validação da data de nascimento
+
+
 
    

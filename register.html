@@ -37,8 +37,9 @@
       <br>
 
     <!-- Campo Data de Nascimento -->
-    <label for="data-nascimento">Data de Nascimento:</label>
-    <input type="date" id="data-nascimento" name="data-nascimento" required autocomplete="off">
+    <label for="dataNascimento">Data de Nascimento:</label><br>
+    <input type="date" id="dataNascimento" required autocomplete="off">
+    <div id="msgErro" class="erro"></div>
     <br>
 
      <!-- Campo de Cpf -->
@@ -49,13 +50,13 @@
 
     <!-- Campo de E-mail -->
     <label for="email">E-mail:</label>
-    <input type="text" id="email" placeholder="Digite seu e-mail" autocomplete="off">
-    <span id="error-message" class="error"></span>
+    <input type="text" id="email" required autocomplete="off">
+    <div id="msgEmail" class="erro"></div>
 
     <!-- Campo Telefone contato -->
     
   <label for="telefone">Telefone:</label>
-  <input type="number" id="telefone" name="telefone" required aria-autocomplete="off">
+  <input type="text" id="telefone" name="telefone" required aria-autocomplete="off">
   <br>
 
     <!-- Campo de Senha -->
