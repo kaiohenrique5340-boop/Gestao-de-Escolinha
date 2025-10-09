@@ -49,14 +49,22 @@ try {
             <tr>
                 <th>Nome</th>
                 <th>Email</th>
+                <th>ID</th>
+                <th>Senha</th>
+                <th>Data de Criação</th>
+                <th>Último Acesso</th>
             </tr>
         </thead>
         <tbody>
             <?php if (count($alunos) > 0): ?>
                 <?php foreach ($alunos as $aluno): ?>
                     <tr>
+                        <td><?php echo htmlspecialchars($aluno['id']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['nome']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['email']); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['senha']); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['datadata_criacao']); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['data_ultimo_acesso']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
