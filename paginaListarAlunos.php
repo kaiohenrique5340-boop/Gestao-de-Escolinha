@@ -3,7 +3,7 @@
 try {
     $db_file = __DIR__ . '/banco.sqlite';
     $pdo = new PDO("sqlite:$db_file");
-    $sql = 'SELECT nome, email FROM usuarios ORDER BY nome';
+    $sql = 'SELECT nome, id, email, senha FROM usuarios ORDER BY nome';
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $alunos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -47,9 +47,9 @@ try {
     <table class="tabela-alunos">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
-                <th>ID</th>
                 <th>Senha</th>
                 <th>Data de Criação</th>
                 <th>Último Acesso</th>
