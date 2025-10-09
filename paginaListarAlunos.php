@@ -17,7 +17,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Lista de Alunos</title>
-    <link rel="stylesheet" href="css/painelAdministrador.css">
+    
     
     <style>
         body {
