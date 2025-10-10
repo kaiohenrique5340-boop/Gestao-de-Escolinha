@@ -3,7 +3,8 @@
 try {
     $db_file = __DIR__ . '/banco.sqlite';
     $pdo = new PDO("sqlite:$db_file");
-    $sql = 'SELECT nome, id, email, senha FROM usuarios ORDER BY nome';
+    // Seleciona também as colunas de data para evitar "Undefined array key"
+    $sql = 'SELECT nome, id, email, senha, data_criacao, data_ultimo_acesso FROM usuarios ORDER BY nome';
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $alunos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -63,13 +64,13 @@ try {
                         <td><?php echo htmlspecialchars($aluno['nome']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['email']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['senha']); ?></td>
-                        <td><?php echo htmlspecialchars($aluno['datadata_criacao']); ?></td>
-                        <td><?php echo htmlspecialchars($aluno['data_ultimo_acesso']); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['data_criacao'] ?? ''); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['data_ultimo_acesso'] ?? ''); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="2">Nenhum aluno encontrado no banco de dados.</td>
+                    <td colspan="6">Nenhum aluno encontrado no banco de dados.</td>
                 </tr>
             <?php endif; ?>
         </tbody>
