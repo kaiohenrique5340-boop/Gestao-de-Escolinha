@@ -10,11 +10,11 @@ if (empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['senha'])) {
 
 //---------- VERIFICACAO EMAIL ----------
 //Verifica se o email é válido
-if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($_POST['email'], FILTER_SANITIZE_EMAIL)) {
     header('Location: registro.html?erro=email_invalido');
     exit();
 }
-$email = $_POST['email'];
+$email = trim(strtolower($_POST['email']));
 
 //verifica se email e unico
 $sqlCheckEmail = "SELECT COUNT(*) FROM usuarios WHERE email = :email";
@@ -47,7 +47,7 @@ if (!preg_match($senha_pattern, $_POST['senha'])) {
 
 
 
-
+$name = trim(strtoupper($_POST['nome']));
 $senhaCript = password_hash($_POST['senha'], PASSWORD_DEFAULT);//criptografa a senha
 $dataAtual = date('Y-m-d');//recebe a data atual no formato ano-mes-dia
 $dataLogin = null; // Inicializa como null, já que o aluno ainda não fez login
@@ -55,7 +55,7 @@ $dataLogin = null; // Inicializa como null, já que o aluno ainda não fez login
 $sql = "INSERT INTO usuarios (nome, email, senha, data_criacao, data_ultimo_acesso) VALUES (:nome, :email, :senha, :data_criacao, :data_ultimo_acesso)";
 $stmt = $pdo->prepare($sql);
 
-$stmt->bindParam(':nome', $_POST['nome']);
+$stmt->bindParam(':nome', $name);
 $stmt->bindParam(':email',$email);
 $stmt->bindParam(':senha', $senhaCript);
 $stmt->bindParam(':data_criacao', $dataAtual);
