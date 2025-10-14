@@ -7,20 +7,22 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
-    color: white; /* Garante que o texto seja branco */
+    color: white;
+    line-height: 1.6;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(10, 10, 10);
-  padding: 25px 30px;
-  color: white;
-  font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  list-style-type: none;
-  position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+    padding: 25px 30px;
+    color: white;
+    font-size: 20px;
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header a {
@@ -28,129 +30,166 @@ header a {
     text-decoration: none;
     color: white;
     display: flex;
+    align-items: center;
 }
 
 header a i {
     color: red;
-    margin: 0 20px 0 0;
+    margin-right: 15px;
 }
 
 header a p {
     color: red;
 }
 
+main {
+    padding: 20px 0;
+}
 
-/* fim do style do header */
-
-/* Estilo do formulário principal, centralizado */
+/* --- MELHORIA PRINCIPAL: LAYOUT EM GRADE --- */
 form {
     background-color: rgba(0, 0, 0, 0.9);
-    width: 600px; /* Ajuste a largura para acomodar mais campos */
-    margin: 50px auto;
-    padding: 50px;
+    max-width: 800px; /* Aumentamos a largura para acomodar as colunas */
+    width: 90%;
+    margin: 30px auto;
+    padding: 40px;
     border-radius: 17px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para destaque */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    /* Ativando o layout em grade */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+    gap: 20px 25px; /* Espaçamento vertical e horizontal entre os campos */
+    align-items: start;
 }
 
-h2{
-  text-align: center;
-  margin-bottom: 20px;
-  color: red;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Classe para elementos que devem ocupar as duas colunas */
+.full-width {
+    grid-column: 1 / -1; /* Ocupa do início ao fim */
 }
 
-/* Estilo para os rótulos (labels) */
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+    width: 100%;
+}
+
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilo para todos os campos de input */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="date"],
-input[type="number"]
-{
-    padding: 5px;
+input[type="date"] {
+    padding: 10px;
     width: 100%;
-    height: 30px;
-    border: none;
+    height: 40px;
+    border: 1px solid #333;
     outline: none;
     font-size: 15px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    background-color: #222;
+    color: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+input:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
 
-    .bnt{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-    }
+/* Estilização específica para o campo Gênero */
+.legend-style {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.gender-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.gender-options label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0; /* Remove a margem padrão do label aqui */
+}
+.gender-options input[type="radio"] {
+    margin-right: 8px;
+}
 
+/* Estilização dos botões */
+.bnt {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
 
-/* Estilo para os botões */
 button {
     background-color: dodgerblue;
     border: none;
-    padding: 10px;
-    width: 200px;
+    padding: 12px;
+    width: 220px;
     border-radius: 10px;
     color: white;
-    font-size: 15px;
-    margin-top: 30px;
-    cursor: pointer; /* Adiciona o cursor de clique */
-
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover {
+button:hover, button:focus {
     background-color: white;
     color: black;
-    transition: 0.5s;
+    outline: none;
 }
 
-/* Estilo para o campo de mensagem (senha e CEP) */
-#mensagem_senha,
-#mensagem_cep {
-    color: dodgerblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: -15px; /* Ajusta o espaçamento */
-    margin-bottom: 10px;
+/* Estilo para mensagens de erro */
+.error-message {
+    color: red;
     font-size: 14px;
+    margin-top: 5px;
+    min-height: 1em; /* Garante espaço para a mensagem não "empurrar" o layout */
 }
 
-.link-login{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
+/* Link para a página de login */
+.link-login {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0 0;
 }
 
-form .login{
-  text-decoration: none;
-  color: rgb(227, 240, 229);
-  font-size: 15px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  justify-content: center;
+.link-login a.login {
+    text-decoration: none;
+    color: rgb(227, 240, 229);
+    font-size: 15px;
 }
 
-
-.login:hover{
-
-  color: dodgerblue;
-  transition: 0.5s;
-  list-style-type: none;
-  text-decoration: none;
+.link-login a.login span {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
+.link-login a.login:hover {
+    color: dodgerblue;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     form {
-        width: 450px;
+        grid-template-columns: 1fr; 
+        gap: 15px; 
     }
 }
-
-
