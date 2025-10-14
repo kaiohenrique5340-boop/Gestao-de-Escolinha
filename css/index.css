@@ -1,42 +1,44 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(10, 10, 10); /* Cor de fundo base */
+    color: white;
+}
 
+/* --- ESTILOS DO HEADER --- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(10, 10, 10);
-    padding: 25px 30px;
-    color: white;
+    padding: 25px 5%; /* Usar % para padding horizontal o torna mais adaptável */
     font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    list-style-type: none;
     z-index: 1000;
     position: sticky;
     top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil para separar */
 }
 
-header a {
-    list-style-type: none;
+header a.logo {
     text-decoration: none;
     color: white;
     display: flex;
+    align-items: center; /* Garante alinhamento vertical */
 }
 
-header a i {
+header a.logo i {
     color: red;
-    margin: 0 20px 0 0;
+    margin-right: 15px; /* Margem ajustada */
 }
 
-header a p {
+header a.logo p {
     color: red;
 }
-
 
 .nav-list {
     list-style: none;
@@ -49,231 +51,160 @@ header a p {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .nav-list li a:hover {
     color: red;
 }
+/* MELHORIA DE ACESSIBILIDADE: Adiciona um anel de foco visível */
+.nav-list li a:focus-visible {
+    outline: 2px solid red;
+    outline-offset: 2px;
+}
 
-main .apresentacao {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 83vh;
+/* --- SEÇÃO HERO --- */
+.hero {
+    min-height: 85vh; /* Usar min-height é mais flexível que height */
     width: 100%;
     display: flex;
-    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    text-align: center;
+    gap: 20px;
+    padding: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(rgba(255, 0, 0, 0.699), rgba(255, 0, 0, 0.5)),
-                url(https://images.totalpass.com/public/1280x720/czM6Ly90cC1pbWFnZS1hZG1pbi1wcm9kL2d5bXMvdHByYnhxN294dXNoNWdsYmtqMnUycm05ejZyOGZ6cjc2Z2ttM2d0azljYWlxbHQ4amYxZnI4aXVjeXpo) no-repeat center center;
+
+    /* MELHORIA DE CSS: Gradiente e imagem em uma única propriedade */
+    background-image: 
+        linear-gradient(rgba(20, 0, 0, 0.7), rgba(20, 0, 0, 0.7)),
+        url(https://images.totalpass.com/public/1280x720/czM6Ly90cC1pbWFnZS1hZG1pbi1wcm9kL2d5bXMvdHByYnhxN294dXNoNWdsYmtqMnUycm05ejZyOGZ6cjc2Z2ttM2d0azljYWlxbHQ4amYxZnI4aXVjeXpo);
     background-size: cover;
-
+    background-position: center;
 }
 
-main.apresentacao::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 0, 0, 0.6), transparent);
-}
-
-main section h1{
-    font-size: 50px;
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Fonte responsiva */
     color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
-main section h1 strong{
+.hero h1 strong {
     color: red;
 }
 
-main section p {
+.hero p {
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    max-width: 600px; /* Evita que a linha fique muito longa em telas grandes */
 }
 
-main section .botoes{
+.hero-button {
     margin-top: 20px;
-}
-
-main section .botoes {
     background-color: black;
     border-radius: 10px;
-    padding: 10px;
-    border: 1px, solid, red;
+    padding: 15px 30px; /* Botão com mais área de clique */
+    border: 1px solid red;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-main section .botoes a{
+.hero-button a {
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-
-main section .botoes:hover{
-    transform: scale(1.1);
-    transition: 1s;
+.hero-button:hover {
+    transform: scale(1.05);
+    background-color: red;
+    border-color: red;
 }
 
-main .apresentacao2 {
-    background-color: rgb(10, 10, 10);    
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-auto-columns: row;
-    place-items: center;
-
+/* --- SEÇÃO DE MOTIVOS (CARDS) --- */
+.reasons-section {
+    background-color: rgb(10, 10, 10);
+    padding: 60px 5%;
+    text-align: center;
 }
 
- main h2 {
-    display: flex;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.reasons-section h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: white;
-    align-items: center;
-    gap: 10px;
-    font-size: 15px;
-    width: 100%;
-    height: 30px;
-    background-color: black;
-    padding: 32px;
+    margin-bottom: 50px;
 }
 
- main h2 i{
+.reasons-section h2 i {
     color: red;
-    font-size: 20px;
 }
 
-main .apresentacao2 div {
-    display: flex;
-    justify-content: center;
+/* --- MELHORIA PRINCIPAL: GRID AUTOMÁTICO E RESPONSIVO --- */
+.cards-container {
+    display: grid;
+    /* Cria colunas que se ajustam automaticamente. Cada coluna terá no mínimo 280px. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-main .apresentacao2 article{
+.card {
     background-color: black;
-    width: 200px;
-    height: 270px;
     text-align: center;
     color: white;
     border-radius: 20px;
-    margin: 50px;
-    padding: 30px;
+    padding: 40px 30px;
     border: 2px solid red;
-    
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-main .apresentacao2 article .cards{
-    width: 100%;
-    justify-content: center;
+.card:hover {
+    transform: translateY(-10px); /* Efeito de elevação mais suave */
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
 }
 
-main .apresentacao2 article:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-
-main .apresentacao2 article i{
+.card i {
     font-size: 30px;
     color: red;
+    margin-bottom: 15px;
 }
 
-main .apresentacao2 article h3{
-    font-size: 17px;
+.card h3 {
+    font-size: 1.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 10px;
+    margin-bottom: 15px;
 }
 
-main .apresentacao2 article p{
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    margin-top: 20px;
+.card p {
+    color: rgb(220, 220, 220); /* Levemente mais claro para contraste */
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-footer div{
+/* --- FOOTER --- */
+footer div {
     background-color: black;
     color: white;
     width: 100%;
     text-align: center;
-    height: 50px;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
+    padding: 20px; /* Mais espaçamento */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*responcividade para notbook*/
-
-@media (max-width: 1400px) {
-    main .apresentacao{
-        height: 470px;
-    }
-}
-
-/*responcividade para mobile*/
-
+/* --- RESPONSIVIDADE PARA MOBILE --- */
 @media (max-width: 750px) {
-
-    header{
-        display: block;
-        justify-content: center;
-        align-items: center;
+    header {
+        flex-direction: column; /* Empilha o logo e o menu */
+        gap: 20px;
+        padding: 20px;
     }
 
-    header .logo{
-
-        padding: 15px;
-        justify-content: center;
+    .hero {
+        min-height: 70vh;
     }
 
-    header .nav-list {
-        justify-content: center;
-    }
-
-    header .nav-list a{
-        font-size: 20px;
-        margin-top: 20px;
-        
-    }
-    main .apresentacao{
-        height: 74vh;
-        display: flex;
-    }
-
-    main .apresentacao h1{
-        font-size: 40px;
-    }
-
-    main .apresentacao a{
-        font-size: 20px;
-
-    }
-
-    main section .botoes a{
-        font-size: 18px;
-        
-    }
-
-    main .apresentacao2 {
-        justify-content: center;
-    }
-
-    main .apresentacao2 .cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-columns: row;
-        place-items: center;
-
-    }
-    
+    /* O grid dos cards já é responsivo, não precisamos de regras extras aqui! */
 }
-
