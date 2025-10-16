@@ -1,56 +1,55 @@
 <?php
-    
-?>
+
+session_start();
 
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"></head>
+try {
+    $db_file = __DIR__ . '/banco.sqlite';
+    $pdo = new PDO("sqlite:$db_file");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro ao conectar com o banco de dados: " . $e->getMessage());
+}
 
-    <title>Faça seu login</title>
-</head>
-<body>
-        <!-- cabecalho-->
-    <header>
-        <a href="index.html">
-            <i class="bi bi-trophy"></i> Living <p>Fight</p>
-        </a>
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+   
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+  
+    if (empty($email) || empty($senha)) {
+        header("Location: login.html?erro=campos_vazios");
+        exit();
+    }
+
+   
+    $sql = "SELECT * FROM usuarios WHERE email = :email";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':email', $email);
+    $stmt->execute();
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+ 
+    if ($usuario && $senha === $usuario['senha']) {
+
+        $_SESSION['usuario_id'] = $usuario['id'];
+        $_SESSION['usuario_email'] = $usuario['email'];
         
-    </header>
-    <!--fim do header-->
 
-    <!--inicio do formulário-->
-    <main>
-        <form action="php/login.php" method="post">
+        header("Location: painelAdministrador.html");
+        exit();
 
-                    <h2>LOGIN</h2> <br>
-                <input type="text" name="nome" id="nome" placeholder="Nome" required> 
-                <br><br>
-                <input type="password" name="senha" id="senha" placeholder="Senha" required> 
-                <br><br>
-                <button>Enviar</button> 
-                <br><br>
-                    <a href="register.html" class="register">Não possui login? <span>Crie sua conta</span><br><br></a> 
-                    <a href="#" class="reset_senha">Esqueci a senha</a>
-            
-        </form>
-    </main>
+    } else {
 
-    <!--Vlibras-->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    <script src="js/login.js"></script>
-</body>
-</html>
+        header("Location: login.html?erro=1");
+        exit();
+    }
+
+} else {
+
+    header("Location: login.html");
+    exit();
+}
+?>
