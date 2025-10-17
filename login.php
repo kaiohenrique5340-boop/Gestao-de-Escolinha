@@ -32,10 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
  
-    if ($usuario && $senha === $usuario['senha']) {
+    if ($usuario && password_verify($senha, $usuario['senha'])) {
 
         $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['usuario_email'] = $usuario['email'];
+        $_SESSION['usuario_nome'] = $usuario['nome'];
         
 
         header("Location: painelAdministrador.html");
