@@ -1,0 +1,27 @@
+/* css/esqueci_senha.css */
+
+/* Estilo base para a caixa de mensagem */
+#mensagem {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; /* A mensagem fica escondida por padrão */
+}
+
+/* Estilo para mensagens de erro */
+#mensagem.erro {
+    background-color: #f8d7da; /* Fundo vermelho claro */
+    color: #721c24; /* Texto vermelho escuro */
+    border: 1px solid #f5c6cb;
+    display: block; /* Mostra a mensagem */
+}
+
+/* Estilo para mensagens de sucesso (não usado aqui, mas bom ter) */
+#mensagem.sucesso {
+    background-color: #d4edda; /* Fundo verde claro */
+    color: #155724; /* Texto verde escuro */
+    border: 1px solid #c3e6cb;
+    display: block; /* Mostra a mensagem */
+}
