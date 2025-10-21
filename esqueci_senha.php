@@ -3,12 +3,15 @@
 session_start();
 
 
+$host = 'localhost';
+$dbname = 'banco';
+$user = 'root';
+$pass = '457880';
+
 try {
-    $db_file = __DIR__ . '/banco.sqlite';
-    $pdo = new PDO("sqlite:$db_file");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
 } catch (PDOException $e) {
-    die("Erro ao conectar com o banco de dados: " . $e->getMessage());
+    
 }
 
 

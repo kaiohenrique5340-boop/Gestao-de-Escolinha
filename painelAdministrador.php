@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,7 +25,7 @@
             </div>
 
             <div class="usuario">
-                <button id="usuario-btn"><i class="bi bi-person-circle"></i></button>
+                <button id="usuario-btn"><?=$_SESSION['usuario_nome']?><i class="bi bi-person-circle"></i></button>
                 <div id="submenu-usuario" class="submenu">
                 <a href="login.php"><i class="bi bi-box-arrow-left"></i> Sair</a>
                 </div>

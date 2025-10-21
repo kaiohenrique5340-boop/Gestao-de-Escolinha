@@ -4,8 +4,17 @@ session_start();
 
 
 try {
-    $db_file = __DIR__ . '/banco.sqlite';
-    $pdo = new PDO("sqlite:$db_file");
+    $host = 'localhost';
+    $dbname = 'banco';
+    $user = 'root';
+    $pass = '457880';
+
+    try {
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    } catch (PDOException $e) {
+    }
+
+    
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Erro ao conectar com o banco de dados: " . $e->getMessage());
@@ -33,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
     if ($usuario && password_verify($senha, $usuario['senha'])) {
         date_default_timezone_set('America/Sao_Paulo');
-        $dataLogin = date('d/m/Y H:i:s');
+        $dataLogin = date('Y-m-d H:i:s');
 
         $updateSql = "UPDATE usuarios SET data_ultimo_acesso = :data_ultimo_acesso WHERE id = :id";
         $updateStmt = $pdo->prepare($updateSql);

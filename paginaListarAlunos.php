@@ -1,8 +1,16 @@
 <?php
 // Bloco de código para buscar os dados no banco de dados
 try {
-    $db_file = __DIR__ . '/banco.sqlite';
-    $pdo = new PDO("sqlite:$db_file");
+    $host = 'localhost';
+    $dbname = 'banco';
+    $user = 'root';
+    $pass = '457880';
+
+    try {
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    } catch (PDOException $e) {
+        
+    }
     // Seleciona também as colunas de data para evitar "Undefined array key"
     $sql = 'SELECT nome, id, email, senha, data_criacao, data_ultimo_acesso FROM usuarios ORDER BY nome';
     $stmt = $pdo->prepare($sql);

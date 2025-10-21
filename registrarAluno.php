@@ -1,6 +1,14 @@
 <?php
-$db_file = __DIR__ . '/banco.sqlite';
-$pdo = new PDO("sqlite:$db_file");
+
+$host = 'localhost';
+$dbname = 'banco';
+$user = 'root';
+$pass = '457880';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+} catch (PDOException $e) {
+}
 
 
 //Verifica se os campos foram preenchidos
@@ -36,8 +44,8 @@ if (($_POST['senha']) != ($_POST['confirmarsenha'])) {
     exit();
 }
 
-// Verifica se a senha atende aos critérios: 8-12 caracteres, pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial
-$senha_pattern = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,12}$/';
+// Verifica se a senha atende aos critérios: 8-16 caracteres, pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial
+$senha_pattern = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,16}$/';
 if (!preg_match($senha_pattern, $_POST['senha'])) {
     // Se a senha não corresponder ao padrão, redireciona com erro
     header('Location: registrar.html?erro=senha_invalida');
