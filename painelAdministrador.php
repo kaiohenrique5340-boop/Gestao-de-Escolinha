@@ -36,8 +36,8 @@ session_start();
         <aside class="sidebar">
             <nav class="menu">
                 <a href="paginaListarAlunos.php" target="conteudo-principal" class="menu-item">ALUNOS</a>
-                <a href="#turmas" class="menu-item">TURMAS</a>
-                <a href="#financeiro" class="menu-item">FINANCEIRO</a>
+                <a href="#" class="menu-item">TURMAS</a>
+                <a href="#" class="menu-item">FINANCEIRO</a>
             </nav>
         </aside>
 

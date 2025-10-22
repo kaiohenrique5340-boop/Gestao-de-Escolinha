@@ -98,7 +98,7 @@
                 <button type="reset" id="limpar">Limpar</button>
             </div>
             <div class="link-login full-width">
-                <a href="login.html" class="login">Já possui login? <span>Entrar</span></a>
+                <a href="login.php" class="login">Já possui login? <span>Entrar</span></a>
             </div>
         </form>
     </main>

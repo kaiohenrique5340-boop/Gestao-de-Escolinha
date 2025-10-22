@@ -11,7 +11,7 @@
 <body>
         <!-- cabecalho-->
     <header>
-        <a href="/">
+        <a href="index.php">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
         
@@ -29,8 +29,8 @@
                 <br><br>
                 <button>Enviar</button> 
                 <br><br>
-                    <a href="register.html" class="register">Não possui login? <span>Crie sua conta</span><br><br></a> 
-                    <a href="esqueci_senha.html" class="reset_senha">Esqueci a senha</a>
+                    <a href="register.php" class="register">Não possui login? <span>Crie sua conta</span><br><br></a> 
+                    <a href="esqueci_senha.php" class="reset_senha">Esqueci a senha</a>
             
         </form>
     </main>
