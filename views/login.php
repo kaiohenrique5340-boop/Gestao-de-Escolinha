@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"></head>
 
     <title>Faça seu login</title>
@@ -11,7 +11,7 @@
 <body>
     <!-- cabecalho-->
     <header>
-        <a href="index.php">
+        <a href="/">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
         
@@ -20,7 +20,7 @@
 
     <!--inicio do formulário-->
     <main>
-        <form action="loginUser.php" method="post">
+        <form action="../loginUser.php" method="post">
 
                     <h2>LOGIN</h2> <br>
                 <input type="text" name="email" id="email" placeholder="Email" required> 

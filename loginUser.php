@@ -56,18 +56,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         
 
-        header("Location: painelAdministrador.php");
+        header("Location: ../views/painelAdministrador.php");
         exit();
 
     } else {
 
-        header("Location: login.html?erro=1");
+        header("Location: login.php?erro=1");
         exit();
     }
 
 } else {
 
-    header("Location: login.html");
+    header("Location: login.php");
     exit();
 }
 ?>
