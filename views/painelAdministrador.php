@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/public/imagens/—Pngtree—inspiration-boxing-logo-professional-boxer_5195569.ico" type="image/x-icon">
     <title>Layout de Site</title>
-    <link rel="stylesheet" href="css/painelAdministrador.css">
+    <link rel="stylesheet" href="../css/painelAdministrador.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,16 +1,10 @@
 <?php
+//conexao com banco de dados
+require_once '../conexao.php';
+
+
 // Bloco de código para buscar os dados no banco de dados
 try {
-    $host = 'localhost';
-    $dbname = 'banco';
-    $user = 'root';
-    $pass = '457880';
-
-    try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    } catch (PDOException $e) {
-        
-    }
     // Seleciona também as colunas de data para evitar "Undefined array key"
     $sql = 'SELECT nome, id, email, senha, data_criacao, data_ultimo_acesso FROM usuarios ORDER BY nome';
     $stmt = $pdo->prepare($sql);
@@ -26,7 +20,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Lista de Alunos</title>
-    <link rel="stylesheet" href="css/pagina-listar-alunos.css">
+    <link rel="stylesheet" href="../css/pagina-listar-alunos.css">
 </head>
 <body>
     <h1>Lista de Alunos</h1>
@@ -46,11 +40,11 @@ try {
                 <?php foreach ($alunos as $aluno): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($aluno['id']); ?></td>
-                        <td><?php echo htmlspecialchars($aluno['nome']); ?></td>
+                        <td><a href="detalhesAluno.php?id=<?php echo htmlspecialchars($aluno['id']); ?>" target="conteudo-principal"><?php echo htmlspecialchars($aluno['nome']); ?></a></td>
                         <td><?php echo htmlspecialchars($aluno['email']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['senha']); ?></td>
-                        <td><?php echo htmlspecialchars($aluno['data_criacao'] ?? ''); ?></td>
-                        <td><?php echo htmlspecialchars($aluno['data_ultimo_acesso'] ?? ''); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['data_criacao'] ?? 'N/A'); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['data_ultimo_acesso'] ?? 'N/A'); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>

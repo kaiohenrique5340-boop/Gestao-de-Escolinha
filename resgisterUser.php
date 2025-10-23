@@ -1,14 +1,6 @@
 <?php
-
-$host = 'localhost';
-$dbname = 'banco';
-$user = 'root';
-$pass = '457880';
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-} catch (PDOException $e) {
-}
+//conexao com banco de dados
+require_once 'conexao.php';
 
 
 //Verifica se os campos foram preenchidos

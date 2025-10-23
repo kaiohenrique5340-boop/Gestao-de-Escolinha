@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="index.php">
+        <a href="/">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
     </header>

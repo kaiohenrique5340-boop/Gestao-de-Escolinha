@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/horarios.css">
+    <link rel="stylesheet" href="../css/horarios.css">
     <title>horarios</title>
 </head>
 <body>
 
     <!-- cabecalho-->
         <header>
-            <a href="index.php">
+            <a href="/">
                 <i class="bi bi-trophy"></i> Living <p>Fight</p>
             </a>
         </header>

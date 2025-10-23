@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="css/contatos.css">
+    <link rel="stylesheet" href="../css/contatos.css">
     <title>contatos</title>
 </heado>
 <body>
 
      <!-- cabecalho-->
         <header>
-            <a href="index.php">
+            <a href="/">
                 <i class="bi bi-trophy"></i> Living <p>Fight</p>
             </a>
         </header>
