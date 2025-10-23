@@ -20,7 +20,7 @@
 
     <!--inicio do formulário-->
     <main>
-        <form action="../loginUser.php" method="post">
+        <form action="loginUser.php" method="post">
 
                     <h2>LOGIN</h2> <br>
                 <input type="text" name="email" id="email" placeholder="Email" required> 
