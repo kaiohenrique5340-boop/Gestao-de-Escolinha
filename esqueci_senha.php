@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="index.php">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
     </header>
@@ -29,7 +29,7 @@
             <br><br>
             <button type="submit">Redefinir</button>
             <br><br>
-            <a href="login.html" class="register">Lembrou a senha? <span>Faça o login</span></a>
+            <a href="login.php" class="register">Lembrou a senha? <span>Faça o login</span></a>
         </form>
     </main>
 

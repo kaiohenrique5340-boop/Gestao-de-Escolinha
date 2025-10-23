@@ -26,30 +26,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Lista de Alunos</title>
-    
-    
-    <style>
-        body {
-            background-color: transparent; /* Garante que o fundo do iframe seja o mesmo do painel */
-            padding: 1rem; /* Adiciona um respiro */
-        }
-        .tabela-alunos {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .tabela-alunos th,
-        .tabela-alunos td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .tabela-alunos th {
-            background-color: #f2f2f2;
-        }
-        .tabela-alunos tbody tr:hover {
-            background-color: #e6e6e6;
-        }
-    </style>
+    <link rel="stylesheet" href="css/pagina-listar-alunos.css">
 </head>
 <body>
     <h1>Lista de Alunos</h1>
