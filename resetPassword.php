@@ -1,18 +1,8 @@
 <?php
 
 session_start();
-
-
-$host = 'localhost';
-$dbname = 'banco';
-$user = 'root';
-$pass = '457880';
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-} catch (PDOException $e) {
-    
-}
+//conexao com banco de dados
+require_once 'conexao.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

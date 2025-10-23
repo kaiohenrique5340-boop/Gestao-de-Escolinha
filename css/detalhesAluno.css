@@ -1,0 +1,55 @@
+/* css/verAluno.css */
+
+/* Usa a mesma fonte do seu painel */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #f4f4f4; /* Um fundo suave */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container-detalhes {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #3498db;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.grupo-dados {
+    margin-bottom: 20px;
+}
+
+.grupo-dados p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Estiliza o "label" da informação */
+.grupo-dados p strong {
+    font-weight: 600;
+    color: #555;
+    min-width: 180px; /* Alinha os campos */
+    display: inline-block;
+}

@@ -1,24 +1,8 @@
 <?php
 
 session_start();
-
-
-try {
-    $host = 'localhost';
-    $dbname = 'banco';
-    $user = 'root';
-    $pass = '457880';
-
-    try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    } catch (PDOException $e) {
-    }
-
-    
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erro ao conectar com o banco de dados: " . $e->getMessage());
-}
+//conexao com banco de dados
+require 'conexao.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
