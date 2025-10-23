@@ -1,0 +1,23 @@
+
+
+/* Remove o contorno padrão quando o input recebe foco */
+.input-control input:focus {
+    outline: 0;
+}
+
+/* Estilo aplicado quando o campo está correto */
+.input-control.success input {
+    border-color: #09c372;            /* verde */
+}
+
+/* Estilo aplicado quando há erro no campo */
+.input-control.error input {
+    border-color: #ff3860;            /* vermelho */
+}
+
+/* Mensagem de erro abaixo do input */
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;                     /* mantém o espaço mesmo sem texto */
+}

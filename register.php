@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/registerv1.css">
+    <link rel="stylesheet" href="css/registerv2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Formulário de Cadastro</title>
 </head>
@@ -18,9 +19,10 @@
         <form id="form" action="registrarAluno.php" method="POST">
             <h2 class="full-width">FORMULÁRIO DE CADASTRO</h2>
             
-            <div class="form-group full-width">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autocomplete="name">
+            <div class="input-control">
+                <label for="username">Nome de usuário</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
             </div>
 
             <div class="form-group full-width">
@@ -43,23 +45,27 @@
                 <p id="mensagem" class="error-message"></p>
             </div>
 
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required autocomplete="email">
-                <div id="msgEmail" class="error-message"></div>
+            <div class="input-control">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
             </div>
+
             <div class="form-group">
                 <label for="telefone">Telefone:</label>
                 <input type="text" id="telefone" name="telefone" required autocomplete="tel">
             </div>
 
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required autocomplete="new-password">
+            <div class="input-control">
+                <label for="password">Senha</label>
+                <input id="password" name="password" type="password">
+                <div class="error"></div>
             </div>
-            <div class="form-group">
-                <label for="confirmarsenha">Confirmar Senha:</label>
-                <input type="password" id="confirmarsenha" name="confirmarsenha" required autocomplete="new-password">
+
+            <div class="input-control">
+                <label for="password2">Repita a senha</label>
+                <input id="password2" name="password2" type="password">
+                <div class="error"></div>
             </div>
 
             <div class="form-group">
@@ -115,6 +121,7 @@
     </script>
 
     <script src="js/jq-viacep-3.7.1.min.js"></script>
-    <script src="js/register.js"></script>
+    <script src="js/registerv1.js"></script>
+    <script src="js/registerv2.js"></script>
 </body>
 </html>
