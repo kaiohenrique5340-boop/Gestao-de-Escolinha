@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         
 
-        header("Location: painelAdministrador.html");
+        header("Location: painelAdministrador.php");
         exit();
 
     } else {
