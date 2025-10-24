@@ -102,7 +102,7 @@ if (!empty($aluno['sexo'])) {
                Alterar
             </a>
             
-            <a href="excluirAluno.php?id=<?php echo $aluno_id; ?>" 
+            <a href="../deleteUser.php?id=<?=  $aluno_id ?>" 
                class="btn btn-excluir" 
                onclick="return confirm('Tem certeza que deseja excluir este aluno? Esta ação não pode ser desfeita.');">
                Excluir
