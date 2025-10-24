@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"></head>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="../img/—Pngtree—inspiration-boxing-logo-professional-boxer_5195569.ico" type="image/x-icon">
     <title>Faça seu login</title>
 </head>
 <body>
@@ -29,8 +29,8 @@
                 <br><br>
                 <button>Enviar</button> 
                 <br><br>
-                    <a href="register.php" class="register">Não possui login? <span>Crie sua conta</span><br><br></a> 
-                    <a href="esqueci_senha.php" class="reset_senha">Esqueci a senha</a>
+                    <a href="inscricao.php" class="register">Não possui login? <span>Crie sua conta</span><br><br></a> 
+                    <a href="redefinirSenha.php" class="reset_senha">Esqueci a senha</a>
             
         </form>
     </main>

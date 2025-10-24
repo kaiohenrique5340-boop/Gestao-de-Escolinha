@@ -21,6 +21,7 @@ try {
     <meta charset="UTF-8">
     <title>Lista de Alunos</title>
     <link rel="stylesheet" href="../css/pagina-listar-alunos.css">
+    
 </head>
 <body>
     <h1>Lista de Alunos</h1>
