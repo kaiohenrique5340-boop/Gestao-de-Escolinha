@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/registerv1.css">
-    <link rel="stylesheet" href="css/registerv2.css">
+    <link rel="stylesheet" href="../css/registerv1.css">
+    <link rel="stylesheet" href="../css/registerv2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="../img/—Pngtree—inspiration-boxing-logo-professional-boxer_5195569.ico" type="image/x-icon">
     <title>Formulário de Cadastro</title>
@@ -17,7 +17,7 @@
         </a>
     </header>
     <main>
-        <form id="form" action="registrarAluno.php" method="POST">
+        <form id="form" action="../resgisterUser.php" method="POST">
             <h2 class="full-width">FORMULÁRIO DE CADASTRO</h2>
             
             <div class="input-control">
@@ -121,8 +121,8 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <script src="js/jq-viacep-3.7.1.min.js"></script>
-    <script src="js/registerv1.js"></script>
-    <script src="js/registerv2.js"></script>
+    <script src="../js/jq-viacep-3.7.1.min.js"></script>
+    <script src="../js/registerv1.js"></script>
+    <script src="../js/registerv2.js"></script>
 </body>
 </html>

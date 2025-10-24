@@ -9,5 +9,6 @@ $stmt->bindValue(':id', $id);
 if ($stmt->execute() === false) {
     header('Location: painelAdministrador.php?sucesso=0');
 } else {
-    header('Location: painelAdministrador.php?sucesso=1');
+    header('Location: ../views/paginaListarAlunos.php?deleted=1');
+    exit();
 }
