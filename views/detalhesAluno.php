@@ -18,8 +18,7 @@ $aluno_id = (int)$_GET['id'];
 try {
     // Prepara a consulta SQL
     // e que os campos do formulário 'inscricao.php' estão nesta tabela
-    $sql = "SELECT nome, sexo, dataNascimento, cpf, email, telefone, senha, 
-                   cep, endereco, numero, complemento, bairro, cidade, estado 
+    $sql = "SELECT nome, email, senha
             FROM usuarios 
             WHERE id = ?"; // (Ajuste o nome da tabela se for diferente)
 
@@ -93,6 +92,22 @@ if (!empty($aluno['sexo'])) {
             <p><strong>Bairro:</strong> <?php echo htmlspecialchars($aluno['bairro'] ?? 'N/A'); ?></p>
             <p><strong>Cidade:</strong> <?php echo htmlspecialchars($aluno['cidade'] ?? 'N/A'); ?></p>
             <p><strong>Estado:</strong> <?php echo htmlspecialchars($aluno['estado'] ?? 'N/A'); ?></p>
+        </div>
+
+        <div class="grupo-botoes">
+            
+            <a href="paginaEditarAluno.php?id=<?php echo $aluno_id; ?>" 
+               class="btn btn-alterar" 
+               target="conteudo-principal">
+               Alterar
+            </a>
+            
+            <a href="excluirAluno.php?id=<?php echo $aluno_id; ?>" 
+               class="btn btn-excluir" 
+               onclick="return confirm('Tem certeza que deseja excluir este aluno? Esta ação não pode ser desfeita.');">
+               Excluir
+            </a>
+
         </div>
 
     </div>

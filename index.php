@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 */
-
+print_r($_SERVER);
 
 $caminho = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
