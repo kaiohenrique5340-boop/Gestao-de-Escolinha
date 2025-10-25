@@ -1,0 +1,135 @@
+/* css/editarAluno.css */
+
+/* Base (igual ao detalhesAluno.css) */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #f4f4f4; 
+    color: #333;
+    box-sizing: border-box; 
+}
+
+.container-detalhes {
+    width: 100%;
+    min-height: 100%;
+    background-color: #ffffff;
+    padding: 25px;
+    box-sizing: border-box; 
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #3498db;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.grupo-dados {
+    margin-bottom: 20px;
+}
+
+/* ---------- NOVOS ESTILOS PARA O FORMULÁRIO ---------- */
+
+/* Estilo para as 'etiquetas' (labels) */
+.grupo-dados label {
+    display: block; /* Faz a label ocupar a linha toda */
+    font-weight: 600;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+/* Estilo para os campos de texto, email, date, etc. */
+.grupo-dados input[type="text"],
+.grupo-dados input[type="email"],
+.grupo-dados input[type="date"],
+.grupo-dados input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não estoure */
+}
+
+.grupo-dados small {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 3px;
+}
+
+/* Estilo para os Radio Buttons de Gênero */
+.legend-style {
+    font-weight: 600;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+.gender-options label {
+    font-weight: 400;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* Estilo para os Botões */
+.grupo-botoes {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-left: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-salvar {
+    background-color: #2ecc71; /* Verde (Sucesso) */
+    color: #ffffff;
+}
+.btn-salvar:hover {
+    background-color: #27ae60;
+}
+
+.btn-cancelar {
+    background-color: #95a5a6; /* Cinza (Cancelar) */
+    color: #ffffff;
+}
+.btn-cancelar:hover {
+    background-color: #7f8c8d;
+}

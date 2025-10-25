@@ -94,7 +94,7 @@ if (!empty($aluno['sexo'])) {
 
         <div class="grupo-botoes">
             
-            <a href="paginaEditarAluno.php?id=<?php echo $aluno_id; ?>" 
+            <a href="editarUsuario.php?id=<?=  $aluno_id ?>" 
                class="btn btn-alterar" 
                target="conteudo-principal">
                Alterar
