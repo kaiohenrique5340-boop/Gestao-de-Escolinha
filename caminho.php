@@ -19,7 +19,7 @@ print_r($_SERVER);
 $caminho = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 if ($caminho === '/'){
-    require_once 'views/paginaPrincipal.php';
+    require_once 'index.php';
 }else if ($caminho === 'views/login.php'){
     require_once 'views/logion.php';
 }else if ($caminho === 'views/esqueci_senha..php'){
