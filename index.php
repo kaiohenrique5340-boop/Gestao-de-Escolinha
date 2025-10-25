@@ -1,34 +1,85 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living - Escolinha de boxe</title>
+    <link rel="shortcut icon" href="../img/—Pngtree—inspiration-boxing-logo-professional-boxer_5195569.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">
+            <i class="bi bi-trophy"></i> Living <p>Fight</p>
+        </a>
+        
+        <nav>
+            <ul class="nav-list">
+                
+                <li><a href="/">Início</a></li>
+                <li><a href="/views/horarios.php">Horários</a></li>
+                <li><a href="/views/contato.php">Contato</a></li>
+                <li><a href="/views/login.php">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="apresentacao" class="hero">
+            <h1>TREINE COMO UM<br><strong>CAMPEÃO</strong></h1>
+            <P>Desenvolva sua técnica, força e disciplina em nossa academia <br>
+            de box. Aulas para todos os níveis com instrutores experientes.</P>
+        
+            <div id="botoes" class="hero-button">
+                <a href="/views/inscricao.php">
+                    <i class="bi bi-people"></i> Fazer Inscrição
+                </a>
+            </div>
+        </section>
+        
+        <section id="motivo-escolha" class="reasons-section">
+            
+            <h2>Por que escolher nossa escolinha? <i class="bi bi-arrow-down-circle"></i></h2>
 
-/* create database banco;
+            <div class="cards-container">
+                <article class="card">
+                    <i class="bi bi-trophy"></i> 
+                    <h3>Instrutor Experiente</h3>
+                    <p>Professor com anos de experiência em competições e ensino de boxe.</p>
+                </article>
+                <article class="card">
+                    <i class="bi bi-people"></i> 
+                    <h3>Turmas Pequenas</h3>
+                    <p>Máximo 8 alunos por turma para atenção personalizada.</p>
+                </article>
+                <article class="card">
+                    <i class="bi bi-star"></i> 
+                    <h3>Equipamentos Profissionais</h3>
+                    <p>Sacos de pancada, luvas e equipamentos de proteção de alta qualidade.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-use banco;
 
-CREATE TABLE IF NOT EXISTS usuarios (
-    id INTEGER PRIMARY KEY auto_increment,
-    nome varchar(250) ,
-    email varchar(250) ,
-    senha varchar(250) ,
-    data_criacao date,
-    data_ultimo_acesso datetime
-);
+    <footer>
+        <div>
+            Todos os direitos reservados ©LivingFight, 2025
+        </div>
+    </footer>
 
-*/
-print_r($_SERVER);
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
-$caminho = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    <script src="../js/jq-viacep-3.7.1.min.js"></script>
 
-if ($caminho === '/'){
-    require_once 'views/paginaPrincipal.php';
-}else if ($caminho === 'views/login.php'){
-    require_once 'views/logion.php';
-}else if ($caminho === 'views/esqueci_senha..php'){
-    require_once 'esqueci_senha.php';
-}else if ($caminho === 'painelAdministrador.php'){
-    require_once 'views/painelAdministrador.php';
-}else if ($caminho === 'register.php'){
-    require_once 'views/register.php';
-}else{
-    http_response_code(404);
-    echo "Página não encontrada.";
-}
+</body>
+</html>
