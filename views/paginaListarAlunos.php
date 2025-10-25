@@ -6,7 +6,7 @@ require_once '../conexao.php';
 // Bloco de código para buscar os dados no banco de dados
 try {
     // Seleciona também as colunas de data para evitar "Undefined array key"
-    $sql = 'SELECT nome, id, email, senha, data_criacao, data_ultimo_acesso FROM usuarios ORDER BY nome';
+    $sql = 'SELECT nome, id, email, senha, data_criacao, ultimo_login FROM usuarios ORDER BY nome';
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $alunos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -45,7 +45,7 @@ try {
                         <td><?php echo htmlspecialchars($aluno['email']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['senha']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['data_criacao'] ?? 'N/A'); ?></td>
-                        <td><?php echo htmlspecialchars($aluno['data_ultimo_acesso'] ?? 'N/A'); ?></td>
+                        <td><?php echo htmlspecialchars($aluno['ultimo_login'] ?? 'N/A'); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>

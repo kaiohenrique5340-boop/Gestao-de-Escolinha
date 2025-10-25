@@ -18,7 +18,7 @@ $aluno_id = (int)$_GET['id'];
 try {
     // Prepara a consulta SQL
     // e que os campos do formulário 'inscricao.php' estão nesta tabela
-    $sql = "SELECT nome, email, senha
+    $sql = "SELECT id, nome, sexo, data_nascimento, cpf, email, telefone, senha, cep, endereco, numero, complemento, bairro, data_criacao, ultimo_login, admin
             FROM usuarios 
             WHERE id = ?"; // (Ajuste o nome da tabela se for diferente)
 
@@ -42,8 +42,8 @@ try {
 
 //---------- Formatacao dos Dados ----------
 $data_nasc_formatada = 'N/A';
-if (!empty($aluno['dataNascimento'])) {
-    $data_nasc_formatada = date("d/m/Y", strtotime($aluno['dataNascimento']));
+if (!empty($aluno['data_nascimento'])) {
+    $data_nasc_formatada = date("d/m/Y", strtotime($aluno['data_nascimento']));
 }
 
 $sexo_formatado = 'N/A';
@@ -90,8 +90,6 @@ if (!empty($aluno['sexo'])) {
             <p><strong>Endereço:</strong> <?php echo htmlspecialchars($aluno['endereco'] ?? 'N/A'); ?>, Nº <?php echo htmlspecialchars($aluno['numero'] ?? 'N/A'); ?></p>
             <p><strong>Complemento:</strong> <?php echo htmlspecialchars($aluno['complemento'] ? $aluno['complemento'] : 'N/A'); ?></p>
             <p><strong>Bairro:</strong> <?php echo htmlspecialchars($aluno['bairro'] ?? 'N/A'); ?></p>
-            <p><strong>Cidade:</strong> <?php echo htmlspecialchars($aluno['cidade'] ?? 'N/A'); ?></p>
-            <p><strong>Estado:</strong> <?php echo htmlspecialchars($aluno['estado'] ?? 'N/A'); ?></p>
         </div>
 
         <div class="grupo-botoes">

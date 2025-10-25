@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'banco';
+$dbname = 'living_fight';
 $user = 'root';
 $pass = '457880';
 

@@ -28,9 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         date_default_timezone_set('America/Sao_Paulo');
         $dataLogin = date('Y-m-d H:i:s');
 
-        $updateSql = "UPDATE usuarios SET data_ultimo_acesso = :data_ultimo_acesso WHERE id = :id";
+        $updateSql = "UPDATE usuarios SET ultimo_login = :ultimo_login WHERE id = :id";
         $updateStmt = $pdo->prepare($updateSql);
-        $updateStmt->bindValue(':data_ultimo_acesso', $dataLogin);
+        $updateStmt->bindValue(':ultimo_login', $dataLogin);
         $updateStmt->bindValue(':id', $usuario['id']);
         $updateStmt->execute();
 
