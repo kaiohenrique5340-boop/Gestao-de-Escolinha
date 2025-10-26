@@ -6,7 +6,7 @@ require_once '../conexao.php';
 // Bloco de código para buscar os dados no banco de dados
 try {
     // Seleciona também as colunas de data para evitar "Undefined array key"
-    $sql = 'SELECT nome, id, email, senha, data_criacao, ultimo_login FROM usuarios ORDER BY nome';
+    $sql = 'SELECT nome, id, email, data_criacao, ultimo_login FROM usuarios ORDER BY nome';
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $alunos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -31,7 +31,6 @@ try {
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
-                <th>Senha</th>
                 <th>Data de Criação</th>
                 <th>Último Acesso</th>
             </tr>
@@ -43,14 +42,13 @@ try {
                         <td><?php echo htmlspecialchars($aluno['id']); ?></td>
                         <td><a href="detalhesAluno.php?id=<?php echo htmlspecialchars($aluno['id']); ?>" target="conteudo-principal"><?php echo htmlspecialchars($aluno['nome']); ?></a></td>
                         <td><?php echo htmlspecialchars($aluno['email']); ?></td>
-                        <td><?php echo htmlspecialchars($aluno['senha']); ?></td>
                         <td><?php echo htmlspecialchars($aluno['data_criacao'] ?? 'N/A'); ?></td>
                         <td><?php echo htmlspecialchars($aluno['ultimo_login'] ?? 'N/A'); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="6">Nenhum aluno encontrado no banco de dados.</td>
+                    <td colspan="5">Nenhum aluno encontrado no banco de dados.</td>
                 </tr>
             <?php endif; ?>
         </tbody>
