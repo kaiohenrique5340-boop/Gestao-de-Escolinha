@@ -1,6 +1,9 @@
 <?php
 session_start(); 
 include '../conexao.php'; //
+if ($_SESSION['admin'] != 1) {
+    die("Acesso negado. Você não é um administrador.");
+}
 
 //---------- Verificação de Segurança e Captura do ID ----------
 if (!isset($_SESSION['usuario_nome'])) {
