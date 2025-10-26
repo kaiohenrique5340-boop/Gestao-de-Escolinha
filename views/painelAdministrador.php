@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+if (!isset($_SESSION['usuario_id'])) {
+    header('Location: login.php?sucesso=0');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +30,7 @@ session_start();
 
             <div class="usuario">
                 <button id="usuario-btn"><?=$_SESSION['usuario_nome']?><i class="bi bi-person-circle"></i></button>
-                <div id="submenu-usuario" class="submenu">
-                <a href="login.php"><i class="bi bi-box-arrow-left"></i> Sair</a>
-                </div>
-            </div>
+                
 
         </header>
 
@@ -40,6 +40,9 @@ session_start();
                 <a href="#" class="menu-item">TURMAS</a>
                 <a href="#" class="menu-item">FINANCEIRO</a>
             </nav>
+            <nav class="logout-container">
+                <a href="../logout.php" class="logout-button">Sair <i class="bi bi-box-arrow-right"></i></a>
+            </nav>
         </aside>
 
         <main class="main">
@@ -47,7 +50,7 @@ session_start();
         </main>
     </div>
 
-    <script src="js/painelAdministrador.js"></script>
+    <script src=".../js/painelAdministrador.js"></script>
 
 </body>
 </html>

@@ -100,6 +100,50 @@ header div p {
     background-color: rgb(10, 10, 10);
     color: #fff;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.logout-container {
+    width: 100%;
+}
+
+.logout-button {
+    display: flex; /* Para alinhar o ícone e o texto */
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+    
+    width: 100%;
+    padding: 12px;
+    
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif; /* Usando a fonte do seu projeto */
+    
+    color: #ffb3b3; /* Um tom de vermelho claro para o texto */
+    background-color: rgba(255, 0, 0, 0.1); /* Fundo vermelho bem sutil */
+    border: 1px solid #ff6666; /* Borda vermelha */
+    border-radius: 8px; /* Cantos arredondados */
+    
+    transition: all 0.3s ease; /* Efeito suave no hover */
+    box-sizing: border-box;
+}
+
+/* Fazer o botão "acender" ao passar o mouse */
+.logout-button:hover {
+    background-color: #d90429; /* Um vermelho forte no hover */
+    border-color: #d90429;
+    color: #ffffff; /* Texto branco */
+    cursor: pointer;
+}
+
+/* Ajusta o ícone (opcional) */
+.logout-button i {
+    margin-left: 8px; /* Espaço entre o texto "Sair" e o ícone */
 }
 
 .menu {
