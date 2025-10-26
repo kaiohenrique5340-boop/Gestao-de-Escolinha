@@ -21,8 +21,8 @@
             <h2 class="full-width">FORMULÁRIO DE CADASTRO</h2>
             
             <div class="input-control">
-                <label for="username">Nome de usuário</label>
-                <input id="username" name="username" type="text">
+                <label for="nome">Nome de usuário</label>
+                <input id="nome" name="nome" type="text">
                 <div class="error"></div>
             </div>
 
@@ -36,8 +36,8 @@
             </div>
 
             <div class="form-group">
-                <label for="dataNascimento">Data de Nascimento:</label>
-                <input type="date" id="dataNascimento" name="dataNascimento" required autocomplete="bday">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required autocomplete="bday">
                 <div id="msgErro" class="error-message"></div>
             </div>
             <div class="form-group">
@@ -48,30 +48,30 @@
 
             <div class="input-control">
                 <label for="email">E-mail</label>
-                <input id="email" name="email" type="text">
+                <input id="email" name="email" type="text" placeholder="nome@exemplo.com">
                 <div class="error"></div>
             </div>
 
             <div class="form-group">
                 <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" required autocomplete="tel">
+                <input type="text" id="telefone" name="telefone" maxlength="11" placeholder="(00)00000-0000" required autocomplete="tel">
             </div>
 
             <div class="input-control">
-                <label for="password">Senha</label>
-                <input id="password" name="password" type="password">
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" type="password">
                 <div class="error"></div>
             </div>
 
             <div class="input-control">
-                <label for="password2">Repita a senha</label>
-                <input id="password2" name="password2" type="password">
+                <label for="senha2">Repita a senha</label>
+                <input id="senha2" name="senha2" type="password">
                 <div class="error"></div>
             </div>
 
             <div class="form-group">
                 <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep" required autocomplete="postal-code">
+                <input type="text" id="cep" name="cep" placeholder="00000-000" required autocomplete="postal-code">
             </div>
             <div class="form-group">
                 <label for="endereco">Endereço:</label>
@@ -91,14 +91,14 @@
                 <label for="bairro">Bairro:</label>
                 <input type="text" id="bairro" name="bairro"  required autocomplete="address-level2">
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="cidade">Cidade:</label>
                 <input type="text" id="cidade" name="cidade" required autocomplete="address-level1">
             </div>
             <div class="form-group">
                 <label for="estado">Estado:</label>
                 <input type="text" id="estado" name="estado" required autocomplete="state">
-            </div>
+            </div>-->
 
             <div class="bnt full-width">
                 <button type="submit">Cadastrar</button>
@@ -111,10 +111,10 @@
     </main>
 
     <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
         <div class="vw-plugin-top-wrapper"></div>
-      </div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>

@@ -1,13 +1,23 @@
 const formulario = document.getElementById('form'); 
-const nomeUsuario = document.getElementById('username');
+const nomeUsuario = document.getElementById('nome');
 const email = document.getElementById('email');
-const senha = document.getElementById('password');
-const confirmarSenha = document.getElementById('password2');
+const senha = document.getElementById('senha');
+const confirmarSenha = document.getElementById('senha2');
 
 formulario.addEventListener('submit', e => {
-    e.preventDefault();
+    e.preventDefault(); // Impede o envio para validar
 
-    validarEntradas();
+    // CORREÇÃO: Verifica o resultado da validação
+    const isFormValid = validarEntradas();
+
+    // Se a validação do CPF também estiver OK (do outro arquivo)
+    const cpfMsg = document.getElementById("mensagem").textContent;
+    const isCpfValid = cpfMsg === "CPF válido!" || cpfMsg === "";
+
+    if (isFormValid && isCpfValid) {
+        // Se tudo estiver OK, envia o formulário
+        formulario.submit();
+    }
 });
 
 const definirErro = (elemento, mensagem) => {
@@ -39,33 +49,43 @@ const validarEntradas = () => {
     const valorSenha = senha.value.trim();
     const valorConfirmarSenha = confirmarSenha.value.trim();
 
+    let isSuccess = true;
+
     if(valorNomeUsuario === '') {
         definirErro(nomeUsuario, 'O nome de usuário é obrigatório');
+        isSuccess = false;
     } else {
         definirSucesso(nomeUsuario);
     }
 
     if(valorEmail === '') {
         definirErro(email, 'O e-mail é obrigatório');
+        isSuccess = false;
     } else if (!emailValido(valorEmail)) {
         definirErro(email, 'Forneça um endereço de e-mail válido');
+        isSuccess = false;
     } else {
         definirSucesso(email);
     }
 
     if(valorSenha === '') {
         definirErro(senha, 'A senha é obrigatória');
+        isSuccess = false;
     } else if (valorSenha.length < 8 ) {
         definirErro(senha, 'A senha deve ter pelo menos 8 caracteres');
+        isSuccess = false;
     } else {
         definirSucesso(senha);
     }
 
     if(valorConfirmarSenha === '') {
         definirErro(confirmarSenha, 'Por favor, confirme sua senha');
+        isSuccess = false;
     } else if (valorConfirmarSenha !== valorSenha) {
         definirErro(confirmarSenha, 'As senhas não coincidem');
+        isSuccess = false;
     } else {
         definirSucesso(confirmarSenha);
     }
+    return isSuccess;
 };
