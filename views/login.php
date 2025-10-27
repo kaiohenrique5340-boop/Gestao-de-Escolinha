@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION['usuario_id'])) {
+        header('Location: ../views/painelAdministrador.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
