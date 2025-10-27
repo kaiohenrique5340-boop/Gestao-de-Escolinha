@@ -16,8 +16,6 @@
         
         <nav>
             <ul class="nav-list">
-                
-                <li><a href="/">Início</a></li>
                 <li><a href="/views/horarios.php">Horários</a></li>
                 <li><a href="/views/contato.php">Contato</a></li>
                 <li><a href="/views/login.php">Login</a></li>
