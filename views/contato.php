@@ -4,38 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <link rel="stylesheet" href="../css/contatos.css">
+  -    <link rel="stylesheet" href="/css/contatos.css">
     <title>contatos</title>
-</heado>
+</head>
 <body>
 
-     <!-- cabecalho-->
-        <header>
-            <a href="/">
-                <i class="bi bi-trophy"></i> Living <p>Fight</p>
-            </a>
-        </header>
-     <!--fim do header-->
+  <main class="container">
+    <!-- LADO ESQUERDO -->
+    <section class="left">
+      <div>
+        <h1>Entre em contato 🥊</h1>
+        <p>
+          Quer saber mais sobre nossas aulas?  
+          Fale com a equipe da <strong>Escolinha de Boxe Living</strong> e daremos um soco na dúvida!
+        </p>
 
-    <form method="post">
-        <h1>NOSSOS CONTATOS</h1>
-        <table>
-            <ul>
-                <li>
-                    <a href="tel:+1198765-4321">Telefone:<i class="bi bi-telephone"></i>(11) 98765-4321</a>
-                </li>
+        <div class="info">
+          <div class="info-item">
+            <strong>Endereço:</strong>
+            Rua dos Atletas, 123 — Rio de janeiro, RJ
+          </div>
+          <div class="info-item">
+            <strong> Telefone / WhatsApp:</strong>
+            (21) 98888-7777
+          </div>
+          <div class="info-item">
+            <strong>E-mail:</strong>
+            contato@campeoesboxe.com.br
+          </div>
+        </div>
+      </div>
 
-                <li>
-                    <a href="mailto:hemriquek38@gmail.com">Email:<i class="bi bi-envelope"></i>contatoescolaboxe@gmail.com</a>
-                </li>
+      <p style="font-size:0.85rem; color:#71717a; margin-top:20px;">
+        Horário de atendimento: Segunda a Sexta, das 9h às 18h.
+      </p>
+    </section>
 
-                <li>
-                    <a href="https://www.google.com/maps/place/UNISUAM/@-22.8671524,-43.2560867,17z/data=!4m6!3m5!1s0x997c03b24d186f:0xf3dd300862682520!8m2!3d-22.8671521!4d-43.2535111!16s%2Fg%2F122bxtf5?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Endereço:<i class="bi bi-geo-alt"></i>Rua do Ringue, 123-Centro Cidade Ficticia</a>
-                </li>
-            </ul>
-        </table>
-    </form>
-    
+    <!-- LADO DIREITO -->
+    <section class="right">
+      <form id="contatoForm">
+        <div>
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required />
+        </div>
+
+        <div>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required />
+        </div>
+
+        <div>
+          <label for="assunto">Assunto</label>
+          <input id="assunto" name="assunto" type="text" placeholder="Ex: Matrícula, Dúvidas, etc." required />
+        </div>
+
+        <div>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui sua mensagem..." required></textarea>
+        </div>
+
+        <button type="submit">Enviar mensagem</button>
+        <div class="status" id="statusMsg"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
