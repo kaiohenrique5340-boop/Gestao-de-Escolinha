@@ -20,7 +20,7 @@
         <form id="form" action="../resgisterUser.php" method="POST">
             <h2 class="full-width">FORMULÁRIO DE CADASTRO</h2>
             
-            <div class="input-control">
+            <div class="input-control full-width">
                 <label for="nome">Nome de usuário</label>
                 <input id="nome" name="nome" type="text">
                 <div class="error"></div>

@@ -33,7 +33,7 @@ header a.logo {
 
 header a.logo i {
     color: red;
-    margin-right: 15px; /* Margem ajustada */
+    margin-right: 5px; /* Margem ajustada */
 }
 
 header a.logo p {

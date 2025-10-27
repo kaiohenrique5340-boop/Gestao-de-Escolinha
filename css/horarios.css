@@ -14,35 +14,35 @@ body{
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(10, 10, 10);
-  padding: 25px 30px;
-  color: white;
-  font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  list-style-type: none;
-  z-index: 1000;
-  position: sticky;
-  top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+    padding: 25px 5%; /* Usar % para padding horizontal o torna mais adaptável */
+    font-size: 20px;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil para separar */
 }
 
 header a {
-    list-style-type: none;
     text-decoration: none;
     color: white;
     display: flex;
+    align-items: center; /* Garante alinhamento vertical */
 }
 
 header a i {
     color: red;
-    margin: 0 20px 0 0;
+    margin-right: 5px; /* Margem ajustada */
 }
 
 header a p {
     color: red;
 }
+
+
 
 
 /* fim do style do header */

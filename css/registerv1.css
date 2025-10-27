@@ -9,6 +9,12 @@ body {
     background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
     color: white;
     line-height: 1.6;
+
+    background-image: 
+    linear-gradient(rgba(20, 0, 0, 0.7), rgba(20, 0, 0, 0.7)),
+    url(https://c.pxhere.com/photos/8e/62/photo-1407070.jpg!d);
+    background-size: cover;
+    background-position: center;
 }
 
 header {
