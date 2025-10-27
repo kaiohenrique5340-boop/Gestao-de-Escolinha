@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  -    <link rel="stylesheet" href="/css/contatos.css">
+    <link rel="stylesheet" href="../css/contatos.css">
     <title>contatos</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <h1>Entre em contato 🥊</h1>
         <p>
           Quer saber mais sobre nossas aulas?  
-          Fale com a equipe da <strong>Escolinha de Boxe Living</strong> e daremos um soco na dúvida!
+          Fale com a equipe da <strong> Living Fight</strong> e daremos um soco na dúvida!
         </p>
 
         <div class="info">
