@@ -1,6 +1,10 @@
 <?php
-//conexao com banco de dados
-require 'conexao.php';
+session_start(); 
+include 'conexao.php'; //Inicia sessao
+//---------- Verificação de Acesso ----------
+if ($_SESSION['admin'] != 1) {
+    die("Acesso negado. Faça login como administrador.");
+}
 
 $id = filter_var(($_GET['id']), FILTER_VALIDATE_INT);
 $sql = 'DELETE FROM usuarios WHERE id = :id';

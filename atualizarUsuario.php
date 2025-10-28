@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // 4. Redireciona de volta para a página de detalhes
         // (Adicionamos ?status=sucesso para podermos mostrar uma mensagem)
-        header("Location: detalhesAluno.php?id=" . $id . "&status=sucesso");
+        header("Location: /views/detalhesAluno.php?id=" . $id . "&status=sucesso");
         exit;
 
     } catch (PDOException $e) {

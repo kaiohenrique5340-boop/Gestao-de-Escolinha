@@ -1,15 +1,14 @@
 <?php
 session_start(); 
-include '../conexao.php'; //
-if ($_SESSION['admin'] != 1) {
-    die("Acesso negado. Você não é um administrador.");
-}
+include '../conexao.php'; //Inicia sessao
+
+//---------- Verificação de Acesso ----------
+//if ($_SESSION['admin'] != 1) {
+//    die("Acesso negado. Faça login como administrador.");
+//}
+
 
 //---------- Verificação de Segurança e Captura do ID ----------
-if (!isset($_SESSION['usuario_nome'])) {
-    die("Acesso negado. Faça login como administrador.");
-}
-
 if (!isset($_GET['id'])) {
     die("Erro: Nenhum ID de aluno fornecido.");
 }
