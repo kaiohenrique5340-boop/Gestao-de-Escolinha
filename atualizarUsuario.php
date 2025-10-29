@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $numero = $_POST['numero'];
     $complemento = $_POST['complemento'];
     $bairro = $_POST['bairro'];
+    $doubleFa = (int)$_POST['2fa'];
     
     
     // Senha (campo especial)
@@ -39,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $sql = "UPDATE usuarios SET 
                         nome = ?, sexo = ?, data_nascimento = ?, cpf = ?, email = ?, 
                         telefone = ?, cep = ?, endereco = ?, numero = ?, complemento = ?, 
-                        bairro = ?, senha = ? 
+                        bairro = ?, senha = ?, 2fa = ?
                     WHERE id = ?";
             
             $params = [
                 $nome, $sexo, $dataNascimento, $cpf, $email, $telefone, 
-                $cep, $endereco, $numero, $complemento, $bairro,
+                $cep, $endereco, $numero, $complemento, $bairro, $doubleFa, 
                 $senha_hash, // Inclui a nova senha
                 $id
             ];
@@ -54,12 +55,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $sql = "UPDATE usuarios SET 
                         nome = ?, sexo = ?, data_nascimento = ?, cpf = ?, email = ?, 
                         telefone = ?, cep = ?, endereco = ?, numero = ?, complemento = ?, 
-                        bairro = ?
+                        bairro = ?, 2fa = ?
                     WHERE id = ?";
             
             $params = [
                 $nome, $sexo, $dataNascimento, $cpf, $email, $telefone, 
-                $cep, $endereco, $numero, $complemento, $bairro,
+                $cep, $endereco, $numero, $complemento, $bairro, $doubleFa,
                 $id // Não inclui a senha
             ];
         }

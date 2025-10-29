@@ -95,6 +95,12 @@ try {
                 <label for="senha">Nova Senha:</label>
                 <input type="password" id="senha" name="senha" placeholder="Deixe em branco para não alterar">
                 <small>Preencha apenas se desejar alterar a senha atual.</small>
+
+                <label for="2fa">Deseja habilitar 2FA:</label>
+                <select id="2fa" name="2fa">
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
             </div>
 
             <div class="grupo-dados">

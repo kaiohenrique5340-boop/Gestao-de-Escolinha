@@ -20,7 +20,7 @@ $aluno_id = (int)$_GET['id'];
 try {
     // Prepara a consulta SQL
     // e que os campos do formulário 'inscricao.php' estão nesta tabela
-    $sql = "SELECT id, nome, sexo, data_nascimento, cpf, email, telefone, senha, cep, endereco, numero, complemento, bairro, data_criacao, ultimo_login, admin
+    $sql = "SELECT id, nome, sexo, data_nascimento, cpf, email, telefone, senha, cep, endereco, numero, complemento, bairro, data_criacao, ultimo_login, admin, 2fa
             FROM usuarios 
             WHERE id = ?"; // (Ajuste o nome da tabela se for diferente)
 
@@ -84,6 +84,7 @@ if (!empty($aluno['sexo'])) {
             <p><strong>Email:</strong> <?php echo htmlspecialchars($aluno['email'] ?? 'N/A'); ?></p>
             <p><strong>Telefone:</strong> <?php echo htmlspecialchars($aluno['telefone'] ?? 'N/A'); ?></p>
             <p><strong>Senha:</strong> ********</p>
+            <p><strong>2FA:</strong> <?php echo htmlspecialchars(($aluno['2fa'] == "1") ?'Habilitado': 'Desabilitado'); ?></p>
         </div>
 
         <div class="grupo-dados">

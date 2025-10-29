@@ -19,6 +19,7 @@ bairro VARCHAR(50),
 data_criacao DATE,
 ultimo_login DATETIME,
 admin BOOLEAN DEFAULT FALSE,
+2fa BOOLEAN DEFAULT FALSE,
 PRIMARY KEY(id)
 );
 
