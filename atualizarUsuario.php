@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $numero = $_POST['numero'];
     $complemento = $_POST['complemento'];
     $bairro = $_POST['bairro'];
-    $doubleFa = (int)$_POST['2fa'];
+    $doubleFa = $_POST['2fa'];
     
     
     // Senha (campo especial)
@@ -38,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
             
             $sql = "UPDATE usuarios SET 
-                        nome = ?, sexo = ?, data_nascimento = ?, cpf = ?, email = ?, 
-                        telefone = ?, cep = ?, endereco = ?, numero = ?, complemento = ?, 
-                        bairro = ?, senha = ?, 2fa = ?
+                        nome = ?, sexo = ?, data_nascimento = ?, cpf = ?, email = ?, telefone = ?, 
+                        cep = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, 2fa = ?, 
+                        senha = ?
                     WHERE id = ?";
             
             $params = [
@@ -53,9 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             // Se a senha ESTÁ VAZIA, não atualiza a senha
             $sql = "UPDATE usuarios SET 
-                        nome = ?, sexo = ?, data_nascimento = ?, cpf = ?, email = ?, 
-                        telefone = ?, cep = ?, endereco = ?, numero = ?, complemento = ?, 
-                        bairro = ?, 2fa = ?
+                        nome = ?, sexo = ?, data_nascimento = ?, cpf = ?, email = ?, telefone = ?, 
+                        cep = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, 2fa = ?
                     WHERE id = ?";
             
             $params = [

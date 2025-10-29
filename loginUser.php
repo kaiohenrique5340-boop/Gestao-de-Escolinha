@@ -25,24 +25,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
  
     if ($usuario && password_verify($senha, $usuario['senha'])) {
-        date_default_timezone_set('America/Sao_Paulo');
-        $dataLogin = date('Y-m-d H:i:s');
+        
 
-        $updateSql = "UPDATE usuarios SET ultimo_login = :ultimo_login WHERE id = :id";
-        $updateStmt = $pdo->prepare($updateSql);
-        $updateStmt->bindValue(':ultimo_login', $dataLogin);
-        $updateStmt->bindValue(':id', $usuario['id']);
-        $updateStmt->execute();
 
-        $_SESSION['usuario_id'] = $usuario['id'];
-        $_SESSION['usuario_email'] = $usuario['email'];
-        $_SESSION['usuario_nome'] = $usuario['nome'];
-        $_SESSION['admin'] = $usuario['admin'];
+        if ($usuario['2fa'] = true) {
+            header("Location: ../views/2fa.php");
+            exit();
+        } else {
+            date_default_timezone_set('America/Sao_Paulo');
+            $dataLogin = date('Y-m-d H:i:s');
+
+            $updateSql = "UPDATE usuarios SET ultimo_login = :ultimo_login WHERE id = :id";
+            $updateStmt = $pdo->prepare($updateSql);
+            $updateStmt->bindValue(':ultimo_login', $dataLogin);
+            $updateStmt->bindValue(':id', $usuario['id']);
+            $updateStmt->execute();
+
+
+
+            $_SESSION['usuario_id'] = $usuario['id'];
+            $_SESSION['usuario_nome'] = $usuario['nome'];
+            $_SESSION['admin'] = $usuario['admin'];
 
         
 
-        header("Location: ../views/painelAdministrador.php");
+            header("Location: ../views/painelAdministrador.php");
         exit();
+        }
+        
 
     } else {
 
