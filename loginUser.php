@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
 
 
-        if ($usuario['2fa'] = true) {
+        if ($usuario['2fa'] == 1) {
             header("Location: ../views/2fa.php");
             exit();
         } else {
