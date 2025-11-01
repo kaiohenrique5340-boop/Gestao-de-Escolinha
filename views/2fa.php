@@ -13,7 +13,13 @@ $perguntas_disponiveis = [
     2 => "Qual seu mes de nascimento?",
     3 => "Qual seu ano de nascimento?",
 ];
-$index_perguntas = array_rand($perguntas_disponiveis);
+
+if (!isset($_SESSION['index_perguntas_2fa'])) {
+    $index_perguntas = array_rand($perguntas_disponiveis);
+    $_SESSION['index_perguntas_2fa'] = $index_perguntas;
+} else {
+    $index_perguntas = $_SESSION['index_perguntas_2fa'];
+}
 
 
 
