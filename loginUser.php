@@ -29,7 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         if ($usuario['2fa'] == 1) {
-            header("Location: ../views/2fa.php");
+            $_SESSION['2fa_usuario_id'] = $usuario['id'];
+            header("location: ../views/2fa.php");
             exit();
         } else {
             date_default_timezone_set('America/Sao_Paulo');

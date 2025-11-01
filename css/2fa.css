@@ -1,0 +1,69 @@
+/* css/esqueci_senha.css */
+
+/* Estilo base para a caixa de mensagem */
+#mensagem {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; /* A mensagem fica escondida por padrão */
+}
+
+/* Estilo para mensagens de erro */
+#mensagem.erro {
+    background-color: #f8d7da; /* Fundo vermelho claro */
+    color: #721c24; /* Texto vermelho escuro */
+    border: 1px solid #f5c6cb;
+    display: block; /* Mostra a mensagem */
+}
+
+/* Estilo para mensagens de sucesso (não usado aqui, mas bom ter) */
+#mensagem.sucesso {
+    background-color: #d4edda; /* Fundo verde claro */
+    color: #155724; /* Texto verde escuro */
+    border: 1px solid #c3e6cb;
+    display: block; /* Mostra a mensagem */
+}
+
+
+/* === ESTILOS ADICIONADOS PARA PERGUNTA SECRETA === */
+
+/* Estes estilos aplicam-se aos novos campos para que 
+  tenham a mesma aparência dos inputs de email e senha.
+*/
+#form-reset select,
+#form-reset input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Assumindo uma borda padrão */
+    border-radius: 5px; /* Assumindo bordas arredondadas */
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+    font-size: 1em;
+    background-color: #fff;
+    font-family: inherit; /* Garante a mesma fonte do resto do form */
+}
+
+/* Estilo específico para o <select> para parecer um input */
+#form-reset select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    
+    /* Adiciona uma seta personalizada para indicar que é um dropdown */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1.41%200.58L6%205.17L10.59%200.58L12%202L6%208L0%202L1.41%200.58Z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+}
+
+/* Cor do "placeholder" (opção desabilitada) do select */
+#form-reset select:required:invalid {
+    color: #757575;
+}
+
+/* Cor das opções no dropdown */
+#form-reset option {
+    color: #000;
+}

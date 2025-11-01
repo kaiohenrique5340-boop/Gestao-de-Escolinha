@@ -1,17 +1,38 @@
+<?php
+include '../conexao.php'; // Inclui a conexão PDO
+session_start();
+if (!isset($_SESSION['2fa_usuario_id'])) {
+    header("Location: login.php");
+    exit();
+}
+$usuario_id = $_SESSION['2fa_usuario_id'];
+
+
+$perguntas_disponiveis = [
+    1 => "Qual seu dia de nascimento?",
+    2 => "Qual seu mes de nascimento?",
+    3 => "Qual seu ano de nascimento?",
+];
+$index_perguntas = array_rand($perguntas_disponiveis);
 
 
 
+
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/esqueci_senha.css">
+    <link rel="stylesheet" href="../css/2fa.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/esqueci_senha.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="../img/—Pngtree—inspiration-boxing-logo-professional-boxer_5195569.ico" type="image/x-icon">
-    <title>Duplo fator de autenticação</title>
+    <title>Autenticacao</title>
 </head>
 <body>
     <header>
@@ -21,24 +42,21 @@
     </header>
 
     <main>
-        <form id="form-reset" action="esqueci_senha.php" method="post">
-            <h2>Duplo fator de autenticação</h2> <br>
+        <form id="autenticao" action="../virificacao2fa.php" method="post">
+            <h2>Autenticacao de fator duplo</h2> <br>
             
             <div id="mensagem"></div>
-
-            <input type="email" name="email" id="email" placeholder="Seu Email de Cadastro" required>
+            <p><?php echo($perguntas_disponiveis[$index_perguntas]); ?></p>
+            <input type="hidden" name="usuario_id" value="<?php echo htmlspecialchars($usuario_id); ?>">
+            <input type="hidden" name="index_perguntas" value="<?php echo htmlspecialchars($index_perguntas); ?>">
+            <input type="text" name="resposta" id="resposta" required>
             <br><br>
-            <input type="password" name="nova_senha" id="nova_senha" placeholder="Nova Senha" required>
-            <br><br>
-            <input type="password" name="confirma_senha" id="confirma_senha" placeholder="Confirme a Nova Senha" required>
-            <br><br>
-            <button type="submit">Redefinir</button>
+            <button type="submit">Enviar</button>
             <br><br>
             <a href="login.php" class="register">Lembrou a senha? <span>Faça o login</span></a>
         </form>
     </main>
 
-    <script>
-    </script>
+    <script></script>
 </body>
 </html>

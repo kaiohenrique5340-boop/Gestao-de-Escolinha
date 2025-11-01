@@ -24,7 +24,7 @@ PRIMARY KEY(id)
 );
 
 INSERT INTO usuarios 
-(nome, sexo, data_nascimento, cpf, email, telefone, senha, cep, endereco, numero, complemento, bairro, data_criacao, ultimo_login, admin) 
+(nome, sexo, data_nascimento, cpf, email, telefone, senha, cep, endereco, numero, complemento, bairro, data_criacao, ultimo_login, admin, 2fa) 
 VALUES
 ('Gabriel', 'feminino', '1990-05-15', '111.222.333-44', 'admin', '(11) 91111-2222', '$2y$10$20tHaX6RhZ6ylCGr6/uJ7.twbqwtVAPMNh35v6/XyCOXzJDJOW5s6', '01001-000', 'Avenida Paulista', 1500, 'Apto 101', 'Bela Vista', '2024-01-10', '2025-10-24 10:30:00', TRUE),
 ('Ana Carolina Souza', 'feminino', '1990-05-15', '111.222.333-44', 'ana.souza@emailteste.com', '(11) 91111-2222', 'e10adc3949ba59abbe56e057f20f883e', '01001-000', 'Avenida Paulista', 1500, 'Apto 101', 'Bela Vista', '2024-01-10', '2025-10-24 10:30:00', TRUE),
