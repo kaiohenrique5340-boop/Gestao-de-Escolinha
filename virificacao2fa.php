@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     switch ($index_perguntas) {
         case 1:
-            $resposta_correta = $data_nasc->format('d');
+              $resposta_correta = $data_nasc->format('d');
             break;
         case 2:
             $resposta_correta = $data_nasc->format('m');

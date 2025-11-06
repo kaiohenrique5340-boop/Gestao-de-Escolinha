@@ -3,38 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/esqueci_senha.css">
+    <link rel="stylesheet" href="../css/esqueci_senha.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="../img/—Pngtree—inspiration-boxing-logo-professional-boxer_5195569.ico" type="image/x-icon">
-    <title>Redefinir Senha</title>
+    <title>ALTERAR SENHA</title>
 </head>
 <body>
+
     <header>
         <a href="/">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
     </header>
 
-    <main>
-        <form id="form-reset" action="esqueci_senha.php" method="post">
-            <h2>REDEFINIR SENHA</h2> <br>
-            
-            <div id="mensagem"></div>
 
-            <input type="email" name="email" id="email" placeholder="Seu Email de Cadastro" required>
-            <br><br>
-            <input type="password" name="nova_senha" id="nova_senha" placeholder="Nova Senha" required>
-            <br><br>
-            <input type="password" name="confirma_senha" id="confirma_senha" placeholder="Confirme a Nova Senha" required>
-            <br><br>
-            <button type="submit">Redefinir</button>
-            <br><br>
-            <a href="login.php" class="register">Lembrou a senha? <span>Faça o login</span></a>
+    <main>
+        <form id="form" action="../resetPassword.php" method="POST">
+            <h2 class="full-width">ALTERAR SENHA</h2>
+            
+            <div class="input-control full-width">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="text" placeholder="nome@exemplo.com">
+                <div class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required autocomplete="bday">
+                <div id="msgErro" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="cpf">Digite seu CPF:</label>
+                <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="000.000.000-00" required autocomplete="off">
+                <p id="mensagem" class="error-message"></p>
+            </div>
+
+            <div class="input-control">
+                <label for="senha">Nova Senha</label>
+                <input id="senha" name="senha" type="password">
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="senha2">Confirmar senha</label>
+                <input id="senha2" name="senha2" type="password">
+                <div class="error"></div>
+            </div>
+
+            <div class="bnt full-width">
+                <button type="submit">Enviar</button>
+            <div class="link-login full-width">
+                <a href="login.php" class="login">Lembrou? <span>Entrar</span></a>
+            </div>
         </form>
     </main>
 
-    <script>
-    </script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 </body>
 </html>
