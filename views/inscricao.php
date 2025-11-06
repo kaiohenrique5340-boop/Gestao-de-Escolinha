@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="cpf">Digite seu CPF:</label>
-                <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="000.000.000-00" required autocomplete="off">
+                <input type="text" id="cpf" name="cpf" maxlength="11" placeholder="00000000000" required autocomplete="off">
                 <p id="mensagem" class="error-message"></p>
             </div>
 
@@ -124,5 +124,6 @@
     <script src="../js/jq-viacep-3.7.1.min.js"></script>
     <script src="../js/registerv1.js"></script>
     <script src="../js/registerv2.js"></script>
+    <script src="../js/registerv3.js"></script>
 </body>
 </html>

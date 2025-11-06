@@ -4,21 +4,6 @@ const email = document.getElementById('email');
 const senha = document.getElementById('senha');
 const confirmarSenha = document.getElementById('senha2');
 
-formulario.addEventListener('submit', e => {
-    e.preventDefault(); // Impede o envio para validar
-
-    // CORREÇÃO: Verifica o resultado da validação
-    const isFormValid = validarEntradas();
-
-    // Se a validação do CPF também estiver OK (do outro arquivo)
-    const cpfMsg = document.getElementById("mensagem").textContent;
-    const isCpfValid = cpfMsg === "CPF válido!" || cpfMsg === "";
-
-    if (isFormValid && isCpfValid) {
-        // Se tudo estiver OK, envia o formulário
-        formulario.submit();
-    }
-});
 
 const definirErro = (elemento, mensagem) => {
     const controleEntrada = elemento.parentElement;
