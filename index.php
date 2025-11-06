@@ -10,15 +10,15 @@
 </head>
 <body>
     <header>
-        <a href="/" class="logo">
+        <a href="/Gestao-de-Escolinha/index.php" class="logo">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
         
         <nav>
             <ul class="nav-list">
-                <li><a href="/views/horarios.php">Horários</a></li>
-                <li><a href="/views/contato.php">Contato</a></li>
-                <li><a href="/views/login.php">Login</a></li>
+                <li><a href="/Gestao-de-Escolinha/views/horarios.php">Horários</a></li>
+                <li><a href="/Gestao-de-Escolinha/views/contato.php">Contato</a></li>
+                <li><a href="/Gestao-de-Escolinha/views/login.php">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -29,7 +29,7 @@
             de box. Aulas para todos os níveis com instrutores experientes.</P>
         
             <div id="botoes" class="hero-button">
-                <a href="/views/inscricao.php">
+                <a href="/Gestao-de-Escolinha/views/inscricao.php">
                     <i class="bi bi-people"></i> Fazer Inscrição
                 </a>
             </div>

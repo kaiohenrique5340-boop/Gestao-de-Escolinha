@@ -19,7 +19,7 @@
 <body>
     <!-- cabecalho-->
     <header>
-        <a href="/">
+        <a href="/Gestao-de-Escolinha/index.php">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
         
