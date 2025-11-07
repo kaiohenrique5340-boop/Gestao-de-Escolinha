@@ -1,21 +1,5 @@
 <?php
 
-/* create database banco;
-
-use banco;
-
-CREATE TABLE IF NOT EXISTS usuarios (
-    id INTEGER PRIMARY KEY auto_increment,
-    nome varchar(250) ,
-    email varchar(250) ,
-    senha varchar(250) ,
-    data_criacao date,
-    data_ultimo_acesso datetime
-);
-
-*/
-print_r($_SERVER);
-
 $caminho = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 if ($caminho === '/'){
