@@ -61,8 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //cria sesao do usuario
         $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['usuario_nome'] = $usuario['nome'];
-        $_SESSION['admin'] = $usuario['admin'];
-
+        $_SESSION['admin'] = ($usuario['admin'] == 1) ? true : false;
+        $_SESSION['login'] = true;
+        
         header("Location: ../views/painelAdministrador.php");
         exit();
     } else {

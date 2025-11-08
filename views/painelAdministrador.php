@@ -1,13 +1,16 @@
 <?php
 session_start();
-if (!isset($_SESSION['usuario_id'])) {
-    header('Location: login.php?sucesso=0');
+if (($_SESSION['login'] !== true)) {
+    header('Location: login.php?sucesso=007');
     exit();
 }
+
+$url_final = $_SESSION['admin'] === true ? 'paginaListarAlunos.php' : 'detalhesAluno.php?id='.$_SESSION['usuario_id'];
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,25 +23,26 @@ if (!isset($_SESSION['usuario_id'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header class="header">
-            
+
             <div class="logo-container">
                 <i id="logo" class="bi bi-trophy"></i> Living <p>Fight</p>
             </div>
 
             <div class="usuario">
-                <button id="usuario-btn"><?=$_SESSION['usuario_nome']?><i class="bi bi-person-circle"></i></button>
-                
+                <button id="usuario-btn"><?= $_SESSION['usuario_nome'] ?><i class="bi bi-person-circle"></i></button>
+
 
         </header>
 
         <aside class="sidebar">
             <nav class="menu">
-                <a href="paginaListarAlunos.php" target="conteudo-principal" class="menu-item">ALUNOS</a>
-                <a href="#" class="menu-item">TURMAS</a>
-                <a href="#" class="menu-item">FINANCEIRO</a>
+                <a href="<?php echo $url_final; ?>" target="conteudo-principal" class="menu-item">ALUNOS</a>
+                <a href="#" target="conteudo-principal" class="menu-item">TURMAS</a>
+                <a href="#" target="conteudo-principal" class="menu-item">FINANCEIRO</a>
             </nav>
             <nav class="logout-container">
                 <a href="../logout.php" class="logout-button">Sair <i class="bi bi-box-arrow-right"></i></a>
@@ -53,4 +57,5 @@ if (!isset($_SESSION['usuario_id'])) {
     <script src=".../js/painelAdministrador.js"></script>
 
 </body>
+
 </html>

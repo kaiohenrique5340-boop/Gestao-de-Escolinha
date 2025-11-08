@@ -1,4 +1,9 @@
 <?php
+session_start();
+if ($_SESSION['admin'] !== true) {
+    header('Location: detalhesAluno.php?id='.$_SESSION['usuario_id']);
+    exit();
+}
 //conexao com banco de dados
 require_once '../conexao.php';
 

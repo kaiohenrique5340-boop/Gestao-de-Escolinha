@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (isset($_SESSION['usuario_id'])) {
+    if ($_SESSION['login'] === true) {
         header('Location: ../views/painelAdministrador.php');
         exit();
     }

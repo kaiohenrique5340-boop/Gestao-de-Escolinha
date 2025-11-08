@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
     if ($usuario && password_verify($senha, $usuario['senha'])) {
         
-
+//
 
         if ($usuario['2fa'] == 1) {
             $_SESSION['2fa_usuario_id'] = $usuario['id'];
@@ -46,9 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nome'] = $usuario['nome'];
-            $_SESSION['admin'] = $usuario['admin'];
-
-        
+            $_SESSION['admin'] = ($usuario['admin'] == 1) ? true : false;
+            $_SESSION['login'] = true;
 
             header("Location: ../views/painelAdministrador.php");
         exit();
