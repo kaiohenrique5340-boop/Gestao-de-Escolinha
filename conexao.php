@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'living_fight';
 $user = 'root';
-$pass = '457880';
+$pass = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);

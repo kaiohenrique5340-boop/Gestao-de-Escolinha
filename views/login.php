@@ -1,9 +1,10 @@
 <?php
-    session_start();
-    if ($_SESSION['login'] === true) {
-        header('Location: ../views/painelAdministrador.php');
-        exit();
-    }
+session_start();
+
+if (isset($_SESSION['login']) && $_SESSION['login'] === true) {
+    header('Location: ../views/painelAdministrador.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
 <body>
     <!-- cabecalho-->
     <header>
-        <a href="/Gestao-de-Escolinha/index.php">
+        <a href="/index.php">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
         

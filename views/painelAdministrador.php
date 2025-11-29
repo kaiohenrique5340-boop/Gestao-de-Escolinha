@@ -33,7 +33,7 @@ $url_final = $_SESSION['admin'] === true ? 'paginaListarAlunos.php' : 'detalhesA
             </div>
 
             <div class="usuario">
-                <button id="usuario-btn"><?= $_SESSION['usuario_nome'] ?><i class="bi bi-person-circle"></i></button>
+            <button id="usuario-btn"><?= $_SESSION['usuario_nome'] ?>-<i class="bi bi-person-circle"></i></button>
 
 
         </header>
@@ -41,8 +41,6 @@ $url_final = $_SESSION['admin'] === true ? 'paginaListarAlunos.php' : 'detalhesA
         <aside class="sidebar">
             <nav class="menu">
                 <a href="<?php echo $url_final; ?>" target="conteudo-principal" class="menu-item">ALUNOS</a>
-                <a href="#" target="conteudo-principal" class="menu-item">TURMAS</a>
-                <a href="#" target="conteudo-principal" class="menu-item">FINANCEIRO</a>
             </nav>
             <nav class="logout-container">
                 <a href="../logout.php" class="logout-button">Sair <i class="bi bi-box-arrow-right"></i></a>

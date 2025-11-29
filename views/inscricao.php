@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        <a href="/Gestao-de-Escolinha/index.php">
+        <a href="/index.php">
             <i class="bi bi-trophy"></i> Living <p>Fight</p>
         </a>
     </header>
