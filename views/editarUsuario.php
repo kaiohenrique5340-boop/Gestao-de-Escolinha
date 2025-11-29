@@ -20,7 +20,7 @@ $aluno_id = (int)$_GET['id'];
 try {
     // Vamos buscar TODOS os campos que podem ser editados
     $sql = "SELECT id, nome, sexo, data_nascimento, cpf, email, telefone, 
-                   cep, endereco, numero, complemento, bairro
+            cep, endereco, numero, complemento, bairro
             FROM usuarios 
             WHERE id = ?"; 
 
